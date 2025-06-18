@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-sm:  558px;
+    --breakpoint-md:  768px;
+
+    --color-alternativePastelYellow: #FDDC71;
+    --color-mainBlack: #000000;
+    --color-greyText: #ABABAB;
+    --color-blackText: #252525;
+}
