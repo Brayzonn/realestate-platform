@@ -3,16 +3,10 @@ interface TwoLineMenuProps {
 }
 
 const TwoLineMenu = ({ className }: TwoLineMenuProps) => (
-  <svg 
-    className={className}
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2"
-  >
-    <line x1="3" y1="8" x2="21" y2="8"/>
-    <line x1="3" y1="16" x2="21" y2="16"/>
-  </svg>
+  <div className={`${className} flex flex-col justify-center space-y-1.5`}>
+    <div className="w-full h-0.5 bg-current"></div>
+    <div className="w-full h-0.5 bg-current"></div>
+  </div>
 );
 
 export default TwoLineMenu;

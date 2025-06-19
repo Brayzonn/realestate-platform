@@ -7,77 +7,97 @@ import customerimageone from '@/assets/images/customerimageone.jpg';
 import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
 import customerimagethree from '@/assets/images/customerimagethree.jpg';
 
-
 const Hero = () => {
   return (
+    <div className='w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row'>
 
-        <div className='w-full min-h-[300px] flex flex-col justify-between items-center space-y-[1rem] md:flex-row md:space-y-0 md:items-start'>
-            <div className='w-full min-h-[100px] flex flex-col justify-center items-start space-y-[1rem] md:flex-row md:space-y-0'>
+        <div className='py-6 pl-[1rem] pr-[1rem] w-full h-full flex flex-col justify-between md:pl-[4rem] md:w-[50%]'>
+            <nav className='w-full flex justify-between items-center border-b border-gray-100 pb-4 md:border-none md:pb-0'>
+                <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
                 
-                <div className='w-full flex flex-col justify-between items-start min-h-[20px] md:w-[50%]'>
-                    <div className='w-full flex justify-between items-center border-b border-gray-100 pb-4 md:border-none md:pb-0'>
-                        <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
-                        <TwoLineMenu className="w-8 h-8" />
+                <Button 
+                    variant="unstyled" 
+                    size="lg"
+                    onChange = {()=>  console.log('clicked')}
+                    onClick  = {() => console.log('clicked')}
+                    className="flex items-center justify-center"
+                >
+                    <TwoLineMenu className="w-8 h-8" />
+                </Button>
+            </nav>
+
+            <div className='flex-1 flex flex-col justify-center items-start space-y-[1rem] pt-[3rem] md:pt-[3rem]'>
+                <h1 className='text-[27px] font-[800] tracking-wide max-w-[400px] uppercase md:text-[36px]'>Where Comfort & Luxury Converge</h1>
+                <p className='text-[16px] max-w-[400px] text-alternativeTextBlack'>We are committed to guiding you towards finding the perfect property and ensuring an exceptional real estate experience.</p>
+                
+                <div className='pt-[1rem] flex justify-start items-start space-x-2'>
+                    <Button 
+                        variant="unstyled" 
+                        size="lg"
+                        onChange={()=> console.log('clicked')}
+                        onClick={() => console.log('clicked')}
+                        className="bg-alternativePastelYellow text-alternativeTextBlack text-[14px] font-[400]"
+                    >
+                        Explore Property
+                    </Button>
+
+                    <Button 
+                        variant="unstyled" 
+                        size="lg"
+                        onChange={()=> console.log('clicked')}
+                        onClick={() => console.log('clicked')}
+                        className="bg-inherit text-alternativeTextBlack text-[14px] flex space-x-2"
+                    >
+                        <p> Contact us </p>
+                        <img src={arrowupright} alt='External link'/>
+                    </Button>
+                </div>
+            </div>
+
+            <div className='pt-[1rem] flex justify-start items-start space-x-2'>
+                <div className='flex justify-start items-start'>
+                    <img 
+                        src={customerimageone} 
+                        alt="customerimageone" 
+                        className="w-12 h-12 rounded-full border-2 border-white relative z-30"
+                    /> 
+                    <img 
+                        src={customerimagetwo} 
+                        alt="customerimagetwo" 
+                        className="w-12 h-12 rounded-full border-2 border-white relative z-20 -ml-3"
+                    /> 
+                    <img 
+                        src={customerimagethree} 
+                        alt="customerimagethree" 
+                        className="w-12 h-12 rounded-full border-2 border-white relative z-10 -ml-3"
+                    /> 
                     </div>
 
-                    <div className='pt-[5rem] w-full flex flex-col justify-center items-start space-y-[1rem]'>
-                        <h1 className='text-[27px] font-[550] uppercase'>Where Comfort & Luxury Converge</h1>
-                        <p className='text-[16px] w-[372px]'>We are committed to guiding you towards finding the perfect property and ensuring an exceptional real estate experience.</p>
-                        
-                        <div className='pt-[1rem] flex justify-start items-start space-x-2'>
-                            <Button 
-                                variant="unstyled" 
-                                size="lg"
-                                onChange={()=> console.log('clicked')}
-                                onClick={() => console.log('clicked')}
-                                className="bg-alternativePastelYellow text-black text-[14px] font-[400]"
-                            >
-                                Explore Property
-                            </Button>
-
-                            <Button 
-                                variant="unstyled" 
-                                size="lg"
-                                onChange={()=> console.log('clicked')}
-                                onClick={() => console.log('clicked')}
-                                className="bg-inherit text-black text-[14px]"
-                            >
-                                Contact us <img src={arrowupright} alt=''/>
-                            </Button>
-                        </div>
-
-                        <div className='pt-[1rem] flex justify-start items-start space-x-2'>
-                            <div className='flex justify-start items-start'>
-                                <img 
-                                    src={customerimageone} 
-                                    alt="customerimageone" 
-                                    className="w-12 h-12 rounded-full border-2 border-white relative z-30"
-                                /> 
-                                <img 
-                                    src={customerimagetwo} 
-                                    alt="customerimagetwo" 
-                                    className="w-12 h-12 rounded-full border-2 border-white relative z-20 -ml-3"
-                                /> 
-                                <img 
-                                    src={customerimagethree} 
-                                    alt="customerimagethree" 
-                                    className="w-12 h-12 rounded-full border-2 border-white relative z-10 -ml-3"
-                                /> 
-                            </div>
-
-                            <p className='w-[114px] text-[14px] font-[200]'>
-                                12k+ Happy Home Customers
-                            </p>
-                        </div>
-                    </div>
+                    <p className='w-[114px] text-[14px] font-[200]'>
+                        12k+ Happy Home Customers
+                    </p>
                 </div>
+        </div>
 
-                <div className='w-full flex justify-center items-center md:w-[50%]'>
-                    <img src={herosectionimage} alt="herosectionimage" />
-                </div>
 
+        <div className='w-full h-full flex justify-center items-center md:w-[50%] relative'>
+            <img src={herosectionimage} alt="herosectionimage" className='w-full h-full object-cover' />
+
+            <div className='absolute bottom-6 right-6 flex flex-col items-end space-y-2'>
+                <Button 
+                    variant="unstyled" 
+                    size="lg"
+                    onChange={()=> console.log('clicked')}
+                    onClick={() => console.log('clicked')}
+                    className="bg-white text-alternativeTextBlack w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                    <img src={arrowupright} alt='External link' className='w-4 h-4'/>
+                </Button>
+                <p className='text-right text-white text-[14px] max-w-[250px]'>Let&apos;s Make Your Dream Home a Reality Get in Touch Today</p>
             </div>
         </div>
+
+    </div>
   )
 }
 
