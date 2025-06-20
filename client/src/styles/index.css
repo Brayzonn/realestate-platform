@@ -4,6 +4,8 @@
 @theme {
     --breakpoint-sm:  558px;
     --breakpoint-md:  768px;
+    --breakpoint-lg:  1168px;
+    --breakpoint-xl: 1640px;
 
     --color-alternativePastelYellow: #FDDC71;
     --color-alternativeTextBlack: #333333;
