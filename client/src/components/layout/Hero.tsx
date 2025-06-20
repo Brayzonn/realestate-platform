@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '@/components/ui/Button';
 import TwoLineMenu from '@/components/ui/TwoLineMenu';  
 import Nav from '@/components/layout/Nav';
