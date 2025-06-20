@@ -1,12 +1,12 @@
 import Hero from '@/components/layout/Hero'
+import FeaturedListings from '@/components/layout/FeaturedListings'
 
 
 const Landing = () => {
   return (
-    <div className="absolute text-mainTextBlack min-h-dvh w-full flex flex-col justify-start items-start">
-        <div className="relative min-h-full w-full flex flex-col justify-start items-start">
-              <Hero />
-        </div>
+    <div className="text-mainTextBlack min-h-screen">
+        <Hero />
+        <FeaturedListings />
     </div>
   )
 }
