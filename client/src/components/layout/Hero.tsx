@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import Button from '@/components/ui/Button';
 import TwoLineMenu from '@/components/ui/TwoLineMenu';  
+import Nav from '@/components/layout/Nav';
 import arrowupright from '@/assets/images/arrowupright.svg';
 import herosectionimage from '@/assets/images/herosectionimage.jpg';
 import companylogo from '@/assets/images/companylogo.png';
@@ -8,7 +10,14 @@ import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
 import customerimagethree from '@/assets/images/customerimagethree.jpg';
 
 const Hero = () => {
+
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
+     <>
     <div className='w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row'>
 
         <div className='py-6 pl-[1rem] pr-[1rem] w-full h-full flex flex-col justify-between md:pl-[4rem] md:w-[50%]'>
@@ -18,11 +27,24 @@ const Hero = () => {
                 <Button 
                     variant="unstyled" 
                     size="lg"
-                    onChange = {()=>  console.log('clicked')}
-                    onClick  = {() => console.log('clicked')}
-                    className="flex items-center justify-center"
+                    onClick={toggleMenu}
+                    className={`flex items-center justify-center relative z-[60] ${
+                        isMenuOpen ? 'w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hidden md:flex' : ''
+                    }`}
                 >
-                    <TwoLineMenu className="w-8 h-8" />
+                    {isMenuOpen ? (
+                        <>
+                            <svg className="w-6 h-6 text-black hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+
+                            <svg className="w-6 h-6 text-black block md:hidden " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </>
+                    ) : (
+                        <TwoLineMenu className="w-8 h-8" />
+                    )}
                 </Button>
             </nav>
 
@@ -36,7 +58,7 @@ const Hero = () => {
                         size="lg"
                         onChange={()=> console.log('clicked')}
                         onClick={() => console.log('clicked')}
-                        className="bg-alternativePastelYellow text-alternativeTextBlack text-[14px] font-[400]"
+                        className="bg-alternativePastelYellow text-alternativeTextBlack text-[14px] font-[400] hover:bg-black hover:text-white transition-colors duration-400"
                     >
                         Explore Property
                     </Button>
@@ -46,10 +68,10 @@ const Hero = () => {
                         size="lg"
                         onChange={()=> console.log('clicked')}
                         onClick={() => console.log('clicked')}
-                        className="bg-inherit text-alternativeTextBlack text-[14px] flex space-x-2"
+                        className="bg-inherit text-alternativeTextBlack text-[14px] flex space-x-2 group"
                     >
                         <p> Contact us </p>
-                        <img src={arrowupright} alt='External link'/>
+                        <img src={arrowupright} alt='External link' className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"/>
                     </Button>
                 </div>
             </div>
@@ -86,10 +108,10 @@ const Hero = () => {
             <div className='absolute bottom-6 right-6 flex flex-col items-end space-y-2'>
                 <Button 
                     variant="unstyled" 
-                    size="lg"
+                    size="unstyled"
                     onChange={()=> console.log('clicked')}
                     onClick={() => console.log('clicked')}
-                    className="bg-white text-alternativeTextBlack w-12 h-12 rounded-full flex items-center justify-center"
+                    className="bg-white text-alternativeTextBlack w-12 h-12 rounded-full flex items-center justify-center hover:bg-alternativePastelYellow transition-colors duration-400"
                 >
                     <img src={arrowupright} alt='External link' className='w-4 h-4'/>
                 </Button>
@@ -98,6 +120,9 @@ const Hero = () => {
         </div>
 
     </div>
+
+    <Nav isOpen={isMenuOpen} onToggle={toggleMenu} />
+     </>
   )
 }
 
