@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '@/components/ui/Button';
+import { useHeader } from '@/hooks/useHeader';
 import TwoLineMenu from '@/components/ui/TwoLineMenu';  
 import Nav from '@/components/layout/Nav';
 import arrowupright from '@/assets/images/arrowupright.svg';
@@ -10,18 +11,25 @@ import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
 import customerimagethree from '@/assets/images/customerimagethree.jpg';
 
 const Hero = () => {
-
-const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isScrolled } = useHeader();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
      <>
     <div className='w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row'>
 
         <div className='py-6 pl-[1rem] pr-[1rem] w-full h-full flex flex-col justify-between md:pl-[4rem] md:w-[50%]'>
-            <nav className='w-full flex justify-between items-center border-b border-gray-100 pb-4 md:border-none md:pb-0'>
+            <nav className={`w-full flex justify-between items-center border-b pb-4 transition-all duration-300
+                ${isScrolled 
+                    ? "fixed top-0 left-0 right-0 z-40 px-[1rem] py-4 bg-white/95 backdrop-blur-sm border-gray-200 md:relative md:px-0 md:py-0 md:bg-transparent md:backdrop-blur-none md:border-gray-100" 
+                    : "relative px-0 py-0 bg-transparent border-gray-100"
+                }
+                md:border-none md:pb-0 md:border-transparent
+            `}>
                 <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
                 
                 <Button 
