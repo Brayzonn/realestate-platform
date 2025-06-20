@@ -22,13 +22,13 @@ const Hero = () => {
      <>
     <div className='w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row'>
 
-        <div className='py-6 pl-[1rem] pr-[1rem] w-full h-full flex flex-col justify-between md:pl-[4rem] md:w-[50%]'>
+        <div className='py-6 pl-[1rem] pr-[1rem] w-full h-full flex flex-col justify-between items-start md:pl-[4rem] lg:pl-[12rem] xl:pl-[18rem] md:w-[50%]'>
             <nav className={`w-full flex justify-between items-center border-b pb-4 transition-all duration-300
                 ${isScrolled 
                     ? "fixed top-0 left-0 right-0 z-40 px-[1rem] py-4 bg-white/95 backdrop-blur-sm border-gray-200 md:relative md:px-0 md:py-0 md:bg-transparent md:backdrop-blur-none md:border-gray-100" 
                     : "relative px-0 py-0 bg-transparent border-gray-100"
                 }
-                md:border-none md:pb-0 md:border-transparent
+                md:border-none md:pb-0 md:border-transparent md:justify-start
             `}>
                 <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
                 
@@ -36,7 +36,7 @@ const Hero = () => {
                     variant="unstyled" 
                     size="lg"
                     onClick={toggleMenu}
-                    className={`flex items-center justify-center relative z-[60] ${
+                    className={`flex items-center justify-center relative z-[60] ml-auto ${
                         isMenuOpen ? 'w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hidden md:flex' : ''
                     }`}
                 >
@@ -56,7 +56,7 @@ const Hero = () => {
                 </Button>
             </nav>
 
-            <div className='flex-1 flex flex-col justify-center items-start space-y-[1rem] pt-[3rem] md:pt-[3rem]'>
+            <div className='flex-1 flex flex-col justify-center items-start space-y-[1rem] pt-[3rem]'>
                 <h1 className='text-[27px] font-[800] tracking-wide max-w-[400px] uppercase md:text-[36px]'>Where Comfort & Luxury Converge</h1>
                 <p className='text-[16px] max-w-[400px] text-alternativeTextBlack'>We are committed to guiding you towards finding the perfect property and ensuring an exceptional real estate experience.</p>
                 
@@ -84,7 +84,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='pt-[1rem] flex justify-start items-start space-x-2'>
+            <div className='flex justify-start items-center space-x-3 pt-[2rem]'>
                 <div className='flex justify-start items-start'>
                     <img 
                         src={customerimageone} 
