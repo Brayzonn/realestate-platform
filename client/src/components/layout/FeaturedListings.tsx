@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Property } from '@/ts-types/property';
-import PropertyCard from '@/components/ui/PropertyCard';
-
-
+import PropertyCard from '@/components/layout/PropertyCard';
 
 
 const FeaturedListings: React.FC = () => {

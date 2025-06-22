@@ -1,77 +1,67 @@
 import { Link } from 'react-router-dom';
-import customerimageone from '@/assets/images/customerimageone.jpg';
-import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
-import customerimagethree from '@/assets/images/customerimagethree.jpg';
+import Button from '@/components/ui/Button'
 import companylogo from '@/assets/images/companylogo.png';
+import TwoLineMenu from '@/components/ui/TwoLineMenu'; 
+import { useHeader } from '@/hooks/useHeader'
 
 interface NavProps {
-    isOpen: boolean;
-    onToggle: () => void;
+    isMenuOpen: boolean;
+    toggleMenu: () => void;
+    setIsMenuOpen : React.Dispatch<React.SetStateAction<boolean>>;
+    showBorder?: boolean;
+    borderOnMobileOnly?: boolean;
+    className?: string;
 }
 
-const Nav = ({ isOpen, onToggle }: NavProps) => {
-  const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Properties', href: '/properties' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
-  ];
+const Nav = ({toggleMenu, isMenuOpen, showBorder = true, borderOnMobileOnly = true, className = "" } : NavProps )=> {
+
+  const { isScrolled } = useHeader();
+
+    const getBorderClass = () => {
+        if (!showBorder) return '';
+        if (borderOnMobileOnly) return 'border-b border-gray-100 pb-4 md:border-none md:pb-0 md:px-0 md:py-0';
+        return 'border-b border-gray-100';
+    };
+
 
   return (
-    <div className={`fixed inset-0 z-50 flex transition-transform duration-500 ease-in-out ${
-      isOpen ? 'translate-x-0' : 'translate-x-full'
-    }`}>
-            <div className="hidden md:block md:w-1/2 backdrop-blur-sm bg-black/20"></div>
-      
-            <div className="w-full md:w-1/2 bg-[#F7F3F2] flex flex-col">
+        <nav className={`w-full flex justify-between items-center transition-all duration-300
+            ${getBorderClass()}
+            ${isScrolled 
+                ? "fixed top-0 left-0 right-0 z-40 px-[1rem] py-4 bg-white/95 backdrop-blur-sm border-gray-200 md:relative md:bg-transparent md:backdrop-blur-none" 
+                : "relative px-0 py-0 bg-transparent"
+            }
+            md:justify-start ${className}
+        `}>
+                <Link to = "/">
+                    <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
+                </Link>
                 
-                    <div className="flex justify-between items-center py-6 pl-[1rem] pr-[1rem] md:pl-[4rem] border-b border-gray-100 md:border-none">
-                        <img src={companylogo} alt="companylogo" className='w-32 md:w-48 lg:w-[200px] h-auto object-contain' />
-                    </div>
+                
+                <Button 
+                    variant="unstyled" 
+                    size="lg"
+                    onClick={toggleMenu}
+                    className={`flex items-center justify-center relative z-[60] ml-auto ${
+                        isMenuOpen ? 'w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hidden md:flex' : ''
+                    }`}
+                >
+                    {isMenuOpen ? (
+                        <>
+                            <svg className="w-6 h-6 text-black hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
 
-                    <nav className="flex-1 flex flex-col justify-start items-start space-y-10 pt-[2rem] pl-[1rem] pr-[1rem] md:pl-[4rem] ">
-                        {menuItems.map((item) => (
-                            <Link
-                            key={item.name}
-                            to={item.href}
-                            className="text-left text-2xl font-[400] text-alternativeTextBlack md:text-[23px] hover:text-[#898887] transition-colors duration-300"
-                            onClick={onToggle}
-                            >
-                            {item.name}
-                            </Link>
-                        ))}
-                    
-                    </nav>
+                            <svg className="w-6 h-6 text-black block md:hidden " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </>
+                    ) : (
+                        <TwoLineMenu className="w-8 h-8" />
+                    )}
+                </Button>
+        </nav>
+  )
+}
 
-                    <div className='p-6 pl-[1rem] pr-[1rem] md:pl-[4rem] flex justify-start items-start space-x-2'>
-                        <div className='flex justify-start items-start'>
-                            <img 
-                                src={customerimageone} 
-                                alt="customerimageone" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-30"
-                            /> 
-                            <img 
-                                src={customerimagetwo} 
-                                alt="customerimagetwo" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-20 -ml-3"
-                            /> 
-                            <img 
-                                src={customerimagethree} 
-                                alt="customerimagethree" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-10 -ml-3"
-                            /> 
-                        </div>
-
-                        <p className='w-[114px] text-[14px] font-[200]'>
-                            12k+ Happy Home Customers
-                        </p>
-                    </div>
-                                
-            </div>
-    </div>
-  );
-};
-
-export default Nav;
+export default Nav
