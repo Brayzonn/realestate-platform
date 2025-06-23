@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
             <div className="border-t border-gray-800 py-6">
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     
-                    <div className="text-gray-400 text-sm">
+                    <div className="text-gray-400 text-center text-sm">
                         Copyright © 2025 company. All rights reserved.
                     </div>
 
