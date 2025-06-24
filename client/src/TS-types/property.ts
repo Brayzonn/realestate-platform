@@ -1,11 +1,17 @@
 export interface Property {
   id: string;
   title: string;
-  price: string;
+  description: string; 
+  price: string; 
+  location: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  images: string[]; 
+  featuredImage: string; 
   category: 'For Sale' | 'For Rent';
-  image: string;
   squareFeet: number;
   bedrooms: number;
   bathrooms: number;
-  link: string;
 }

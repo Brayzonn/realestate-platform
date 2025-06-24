@@ -1,29 +1,26 @@
+import { Property } from "@/ts-types/property";
 
-const PropertyImageGallery = () => {
-  
-   const testImagesPlaceholder = [
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-        "https://cdn.prod.website-files.com/66f262050f96e0f9e1e456b4/670e5738e8d02cef5b68b66a_image%20(68).png",
-   ];
+interface PropertyImageGalleryProps {
+    property: Property;
+}
+
+const PropertyImageGallery = ({property} : PropertyImageGalleryProps) => {
 
   return (
     <>
-        {testImagesPlaceholder.map((image, index) => (
-            <img 
-                key={index}
-                src={image} 
-                alt={`Property ${index + 1}`}
-                className="w-full h-[240px] object-cover"
-                loading="lazy"
-            />
-        ))}
+    {property.images.map((image, index) => (
+        <img 
+          key={index}
+          src={image} 
+          alt={`${property.title}`}
+          className="w-full h-[240px] object-cover"
+          loading="lazy"
+        />
+    ))}
    </>
   )
 }
 
 export default PropertyImageGallery
+
 

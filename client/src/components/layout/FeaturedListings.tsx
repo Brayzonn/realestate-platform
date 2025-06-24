@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { propertiesData } from '@/store/data';
 import PropertyCard from '@/components/layout/PropertyCard';
+import { HomeIcon } from '@/components/icons/Index';
 
 
 const FeaturedListings = () => {
@@ -28,9 +29,10 @@ const FeaturedListings = () => {
             <div className="text-center">
                 <Link 
                     to="/properties" 
-                    className="inline-flex items-center px-6 py-4 border border-alternativePastelYellow text-sm font-medium rounded-md text-alternativeTextBlack bg-alternativePastelYellow hover:bg-gray-50 hover:text-alternativeTextBlack hover:border-gray-200 transition-colors duration-200"
+                    className="inline-flex space-x-2 items-center px-6 py-4 border border-alternativePastelYellow text-sm font-medium rounded-md text-alternativeTextBlack bg-alternativePastelYellow hover:bg-black hover:text-white hover:border-black transition-colors duration-200"
                 >
-                    Explore All Listings
+                    <HomeIcon />
+                    <p className='pl-1'>Explore All Listings</p> 
                 </Link>
             </div>
                 
