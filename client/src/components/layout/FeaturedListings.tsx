@@ -7,11 +7,11 @@ import { HomeIcon } from '@/components/icons/Index';
 const FeaturedListings = () => {
 
   return (
-    <section className="w-full flex justify-center items-center py-[10rem] md:py-[7rem]">
+    <section className="py-[10rem] md:py-[7rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="flex flex-col justify-start items-center space-y-2 text-center mb-[5rem]">
-                <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                <h1 className="text-3xl uppercase md:text-4xl font-bold mb-4">
                     Featured properties
                 </h1>
 
@@ -21,7 +21,7 @@ const FeaturedListings = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {propertiesData.map((property) => (
+                {propertiesData.slice(0, 6).map((property) => (
                     <PropertyCard key={property.id} property={property} />
                 ))}
             </div>
