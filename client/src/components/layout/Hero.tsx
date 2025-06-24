@@ -17,10 +17,10 @@ const Hero = () => {
 
   return (
      <>
-        <div className='w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row md:space-y-0'>
+        <div className='max-w-7xl mx-auto w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row md:space-y-0'>
             
             <div className='w-full h-full flex flex-col justify-between items-start md:w-[50%]'>
-                
+          
                 <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} className={'px-4 sm:px-6 lg:px-8'} />
                
                 <div className='flex-1 w-full flex flex-col justify-center items-start space-y-[1rem] px-4 pt-[4rem] sm:px-6 md:pt-[0px] lg:px-8 '>
@@ -81,7 +81,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='w-full h-[300px] flex justify-center items-center md:w-[50%] md:h-full relative'>
+            <div className='w-full h-[300px] flex justify-center items-center md:w-[50vw] md:h-full relative'>
                 <img src={herosectionimage} alt="herosectionimage" className='w-full h-full object-cover' />
 
                 <div className='absolute bottom-6 right-6 flex flex-col items-end space-y-2'>
