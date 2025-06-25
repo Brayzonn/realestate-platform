@@ -7,7 +7,7 @@ import { HomeIcon } from '@/components/icons/Index';
 const FeaturedListings = () => {
 
   return (
-    <section className="py-[10rem] md:py-[7rem]">
+    <section className="pt-[10rem] pb-[4rem] md:pt-[7rem] md:pb-[3rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="flex flex-col justify-start items-center space-y-2 text-center mb-[5rem]">
