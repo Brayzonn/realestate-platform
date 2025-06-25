@@ -15,3 +15,9 @@ export interface Property {
   bedrooms: number;
   bathrooms: number;
 }
+
+
+export interface SlideImage {
+  url: string;
+  alt: string;
+}

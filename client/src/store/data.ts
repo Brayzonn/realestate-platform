@@ -1,4 +1,4 @@
-import { Property } from "@/ts-types/property";
+import { Property, SlideImage } from "@/ts-types/property";
 
 export const propertiesData: Property[] = [
         {
@@ -149,3 +149,23 @@ export const propertiesData: Property[] = [
                 bathrooms: 5,
         },
 ];
+
+
+export const slideImages: SlideImage[] = [
+    {
+      url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+      alt: "Modern interior design living room"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80", 
+      alt: "Contemporary kitchen design"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80", // Fixed: Changed to a different bedroom image
+      alt: "Elegant bedroom interior"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80",
+      alt: "Stylish home office space"
+    }
+  ];
