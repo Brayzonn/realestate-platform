@@ -4,6 +4,9 @@ import FeaturedListings from '@/components/layout/FeaturedListings';
 import Faq from '@/components/layout/Faq';
 import ContactSection from '@/components/layout/ContactSection';
 import OurStory from '@/components/layout/OurStory';
+import ClientsTestimonials from '@/components/layout/ClientsTestimonials';
+import LandingPageCommunities from '@/components/layout/LandingPageCommunities';
+import NewsUpdate from '@/components/layout/NewsUpdate';
 import Footer from '@/components/layout/Footer';
 
 const Landing = () => {
@@ -14,12 +17,15 @@ const Landing = () => {
   };
 
   return (
-    <div className={`text-mainTextBlack min-h-screen ${isMenuOpen ? 'fixed' : 'relative'}`}>
+    <div className={`text-mainTextBlack min-h-screen ${isMenuOpen ? 'relative' : 'relative'}`}>
         <Hero isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu}/>
         <FeaturedListings />
         <OurStory />
-        <Faq />
+        < LandingPageCommunities/>
+        <ClientsTestimonials />
+        <NewsUpdate />
         <ContactSection/>
+        <Faq />
         <Footer />
     </div>
   )

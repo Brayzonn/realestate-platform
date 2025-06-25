@@ -25,7 +25,7 @@ const Hero = ({isMenuOpen, setIsMenuOpen, toggleMenu} : HeroProps) => {
                 <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} className={'px-4 sm:px-6 lg:px-8'} />
                
                 <div className='flex-1 w-full flex flex-col justify-center items-start space-y-[1rem] px-4 pt-[4rem] sm:px-6 md:pt-[0px] lg:px-8 '>
-                        <h1 className='text-[27px] font-[800] tracking-wide max-w-[400px] uppercase md:text-[36px]'>
+                        <h1 className='text-[27px] font-[800] tracking-wide max-w-[600px] uppercase text-3xl md:text-4xl lg:text-5xl'>
                             Where Comfort & Luxury Converge
                         </h1>
 
