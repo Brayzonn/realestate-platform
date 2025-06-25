@@ -18,15 +18,13 @@ const Properties = () => {
   };
 
   return (
-<>
-    <div className='min-h-screen flex flex-col space-y-[2rem]'>
-
+    <div className={`text-mainTextBlack min-h-screen ${isMenuOpen ? 'fixed' : 'relative'}`}>
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} 
               toggleMenu={toggleMenu} showBorder={true} borderOnMobileOnly={false} 
               className ={`px-[1rem] min-h-[100px]`}
         />
 
-        <main className='flex-1 max-w-7xl mx-auto pt-[2rem] px-[1rem] flex flex-col'>
+        <main className='flex-1 max-w-7xl py-[4rem] mx-auto flex flex-col space-y-[3rem] px-4 sm:px-6 lg:px-8 '>
             <h1 className='text-[27px] text-left w-full font-[900] uppercase md:text-[36px]'>Property Listings</h1>
 
             <AllListings />
@@ -34,10 +32,8 @@ const Properties = () => {
 
         <Footer />
 
+      <NavMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
     </div>
-
-    <NavMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
-</>
   )
 }
 

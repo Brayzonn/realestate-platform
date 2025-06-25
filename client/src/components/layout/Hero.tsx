@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Button from '@/components/ui/Button';
 import NavMenu from '@/components/layout/NavMenu';
 import Nav from '@/components/layout/Nav'
@@ -8,12 +7,14 @@ import customerimageone from '@/assets/images/customerimageone.jpg';
 import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
 import customerimagethree from '@/assets/images/customerimagethree.jpg';
 
-const Hero = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface HeroProps{
+    isMenuOpen: boolean;
+    setIsMenuOpen:React.Dispatch<React.SetStateAction<boolean>>;
+    toggleMenu: () => void;
+}
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+const Hero = ({isMenuOpen, setIsMenuOpen, toggleMenu} : HeroProps) => {
+
 
   return (
      <>
