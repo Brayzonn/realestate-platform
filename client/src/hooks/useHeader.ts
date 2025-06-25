@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
 
 interface UseHeaderOptions {
-     scrollThreshold?: number; 
+  scrollThreshold?: number;
 }
 
-export const useHeader = ({ scrollThreshold = 100 }: UseHeaderOptions = {}) => {
-    const [isScrolled, setIsScrolled] = useState(false);
+export const useHeader = ({ scrollThreshold = 1000 }: UseHeaderOptions = {}) => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-        setIsScrolled(window.scrollY > scrollThreshold);
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [scrollThreshold]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollThreshold]);
 
   return {
     isScrolled,

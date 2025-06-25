@@ -17,18 +17,18 @@ const Landing = () => {
   };
 
   return (
-    <div className={`text-mainTextBlack min-h-screen ${isMenuOpen ? 'relative' : 'relative'}`}>
-        <Hero isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu}/>
-        <FeaturedListings />
-        <OurStory />
-        < LandingPageCommunities/>
-        <ClientsTestimonials />
-        <NewsUpdate />
-        <ContactSection/>
-        <Faq />
-        <Footer />
+    <div>
+      <Hero isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} />
+      <FeaturedListings />
+      <OurStory />
+      <LandingPageCommunities />
+      <ClientsTestimonials />
+      <NewsUpdate />
+      <ContactSection />
+      <Faq />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

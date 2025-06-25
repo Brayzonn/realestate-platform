@@ -1,108 +1,122 @@
 import Button from '@/components/ui/Button';
 import NavMenu from '@/components/layout/NavMenu';
-import Nav from '@/components/layout/Nav'
+import { useHeader } from '@/hooks/useHeader';
+import Nav from '@/components/layout/Nav';
 import arrowupright from '@/assets/images/arrowupright.svg';
-import herosectionimage from '@/assets/images/herosectionimage.jpg';
-import customerimageone from '@/assets/images/customerimageone.jpg';
-import customerimagetwo from '@/assets/images/customerimagetwo.jpg';
-import customerimagethree from '@/assets/images/customerimagethree.jpg';
+import companylogoblack from '@/assets/images/companylogoblack.svg';
 
-interface HeroProps{
-    isMenuOpen: boolean;
-    setIsMenuOpen:React.Dispatch<React.SetStateAction<boolean>>;
-    toggleMenu: () => void;
+interface HeroProps {
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMenu: () => void;
 }
 
-const Hero = ({isMenuOpen, setIsMenuOpen, toggleMenu} : HeroProps) => {
-
+const Hero = ({ isMenuOpen, setIsMenuOpen, toggleMenu }: HeroProps) => {
+  const { isScrolled } = useHeader();
 
   return (
-     <>
-        <div className='max-w-7xl mx-auto w-full h-[700px] flex flex-col space-y-[2rem] md:flex-row md:space-y-0'>
-            
-            <div className='w-full h-full flex flex-col justify-between items-start md:w-[50%]'>
-          
-                <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} className={'px-4 sm:px-6 lg:px-8'} />
-               
-                <div className='flex-1 w-full flex flex-col justify-center items-start space-y-[1rem] px-4 pt-[4rem] sm:px-6 md:pt-[0px] lg:px-8 '>
-                        <h1 className='text-[27px] font-[800] tracking-wide max-w-[600px] uppercase text-3xl md:text-4xl lg:text-5xl'>
-                            Where Comfort & Luxury Converge
-                        </h1>
+    <>
+      <div className="relative min-h-screen w-full overflow-hidden bg-gray-50">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Luxury modern home"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/80"></div>
+        </div>
+        <Nav
+          scrolledLogo={companylogoblack}
+          logoAlt="Logo"
+          menuIconColor={`${isScrolled ? 'text-black' : 'text-white'}`}
+          showBorder={false}
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          toggleMenu={toggleMenu}
+          className="bg-inherit px-4 sm:px-6 lg:px-8"
+        />
+        <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col">
+          <div className="flex flex-1 items-center justify-between px-4 py-16 sm:px-6 lg:px-8">
+            <div className="flex w-full flex-col space-y-8 lg:w-1/2">
+              <div className="flex items-center space-x-3">
+                <div className="h-[2px] w-12 bg-yellow-400"></div>
+                <span className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Premium Real Estate
+                </span>
+              </div>
 
-                        <p className='text-[16px] max-w-[400px] text-alternativeTextBlack'>
-                            We are committed to guiding you towards finding the perfect property and ensuring an exceptional real estate experience.
-                        </p>
-                        
-                        <div className='pt-[1rem] flex justify-start items-start space-x-2'>
-                            <Button 
-                                variant="unstyled" 
-                                size="lg"
-                                onClick={() => console.log('clicked')}
-                                className="bg-alternativePastelYellow text-alternativeTextBlack text-[14px] font-[400] hover:bg-black hover:text-white transition-colors duration-400"
-                            >
-                                Explore Property
-                            </Button>
+              <h1 className="text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl">
+                Where Comfort & Luxury Converge
+              </h1>
 
-                            <Button 
-                                variant="unstyled" 
-                                size="lg"
-                                onClick={() => console.log('clicked')}
-                                className="bg-inherit text-alternativeTextBlack text-[14px] flex space-x-2 group"
-                            >
-                                <p> Contact us </p>
-                                <img src={arrowupright} alt='External link' className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"/>
-                            </Button>
-                        </div>
+              <p className="max-w-[700px] text-lg leading-relaxed tracking-wide text-gray-200">
+                We are committed to guiding you towards finding the perfect property and ensuring an
+                exceptional real estate experience with world-class construction and design.
+              </p>
+
+              <div className="flex space-x-8 py-4">
+                <div>
+                  <div className="text-2xl font-bold text-white">500+</div>
+                  <div className="text-sm text-gray-300">Properties Built</div>
                 </div>
-
-                <div className='px-4 sm:px-6 lg:px-8 py-4 w-full'>
-                    <div className='flex justify-start items-center space-x-3'>
-                        <div className='flex justify-start items-start'>
-                            <img 
-                                src={customerimageone} 
-                                alt="customerimageone" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-30"
-                            /> 
-                            <img 
-                                src={customerimagetwo} 
-                                alt="customerimagetwo" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-20 -ml-3"
-                            /> 
-                            <img 
-                                src={customerimagethree} 
-                                alt="customerimagethree" 
-                                className="w-12 h-12 rounded-full border-2 border-white relative z-10 -ml-3"
-                            /> 
-                        </div>
-
-                        <p className='w-[114px] text-[14px] font-[200]'>
-                            4k+ Happy Home Customers
-                        </p>
-                    </div>
+                <div>
+                  <div className="text-2xl font-bold text-white">15+</div>
+                  <div className="text-sm text-gray-300">Years Experience</div>
                 </div>
+                <div>
+                  <div className="text-2xl font-bold text-white">98%</div>
+                  <div className="text-sm text-gray-300">Client Satisfaction</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <Button
+                  variant="unstyled"
+                  size="lg"
+                  onClick={() => console.log('clicked')}
+                  className="transform bg-yellow-400 px-8 py-4 font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-lg"
+                >
+                  Explore Properties
+                </Button>
+
+                <Button
+                  variant="unstyled"
+                  size="lg"
+                  onClick={() => console.log('clicked')}
+                  className="group flex items-center space-x-2 border-2 border-white px-8 py-4 text-white transition-all duration-300 hover:bg-white hover:text-black"
+                >
+                  <span>Contact Us</span>
+                  <img
+                    src={arrowupright}
+                    alt="External link"
+                    className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                </Button>
+              </div>
             </div>
+          </div>
 
-            <div className='w-full h-[300px] flex justify-center items-center md:w-[50vw] md:h-full relative'>
-                <img src={herosectionimage} alt="herosectionimage" className='w-full h-full object-cover' />
-
-                <div className='absolute bottom-6 right-6 flex flex-col items-end space-y-2'>
-                    <Button 
-                        variant="unstyled" 
-                        size="unstyled"
-                        onClick={() => console.log('clicked')}
-                        className="bg-white text-alternativeTextBlack w-12 h-12 rounded-full flex items-center justify-center hover:bg-alternativePastelYellow transition-colors duration-400"
-                    >
-                        <img src={arrowupright} alt='External link' className='w-4 h-4'/>
-                    </Button>
-                    <p className='text-right text-white text-[14px] max-w-[250px]'>Let&apos;s Make Your Dream Home a Reality Get in Touch Today</p>
-                </div>
+          <div className="flex justify-center pb-8">
+            <div className="flex flex-col items-center space-y-2">
+              <span className="text-sm text-gray-300">Scroll to explore</span>
+              <div className="h-8 w-[2px] animate-pulse bg-white/50"></div>
             </div>
-
+          </div>
         </div>
 
-        <NavMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
-     </>
-  )
-}
+        <div className="absolute bottom-10 left-10 hidden lg:block">
+          <div className="rounded-full bg-white/20 p-4 backdrop-blur-sm">
+            <div className="flex items-center space-x-3">
+              <div className="h-3 w-3 animate-pulse rounded-full bg-green-400"></div>
+              <span className="text-sm text-white">24/7 Support Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-export default Hero
+      <NavMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
+    </>
+  );
+};
+
+export default Hero;
