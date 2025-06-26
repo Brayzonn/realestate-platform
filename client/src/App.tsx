@@ -4,21 +4,22 @@ import Properties from '@/pages/Properties';
 import AboutUs from '@/pages/AboutUs';
 import PropertyView from '@/pages/PropertyView';
 import ScrollToTop from '@/components/common/ScrollToTop';
-
+import Contactus from './pages/Contactus';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <Routes>
-          <Route path='/' element={<Landing />}/>
-          <Route path='/about' element={<AboutUs />}/>
-          <Route path='/properties' element={<Properties />}/>
-          <Route path='/properties/:id' element={<PropertyView />}/>
-          <Route path="*" element={<Landing />}/>
+        <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/properties" element={<Properties />} />
+        <Route path="/Contact-us" element={<Contactus />} />
+        <Route path="/properties/:id" element={<PropertyView />} />
+        <Route path="*" element={<Landing />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
