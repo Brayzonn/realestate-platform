@@ -5,6 +5,7 @@ import AboutUs from '@/pages/AboutUs';
 import PropertyView from '@/pages/PropertyView';
 import ScrollToTop from '@/components/common/ScrollToTop';
 import Contactus from './pages/Contactus';
+import Communities from './pages/Communities';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/properties" element={<Properties />} />
         <Route path="/Contact-us" element={<Contactus />} />
+        <Route path="/Communities" element={<Communities />} />
+        <Route path="/properties" element={<Properties />} />
         <Route path="/properties/:id" element={<PropertyView />} />
         <Route path="*" element={<Landing />} />
       </Routes>

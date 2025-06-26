@@ -48,9 +48,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: TwitterIcon, href: 'https://twitter.com/', label: 'Twitter' },
+    { icon: TwitterIcon, href: 'https://twitter.com/brayzoney', label: 'Twitter' },
     { icon: FacebookIcon, href: 'https://facebook.com/', label: 'Facebook' },
-    { icon: YouTubeIcon, href: 'https://youtube.com/', label: 'YouTube' },
+    { icon: YouTubeIcon, href: 'https://youtube.com/brayzonn', label: 'YouTube' },
     { icon: InstagramIcon, href: 'https://instagram.com/', label: 'Instagram' },
   ];
 
@@ -110,17 +110,17 @@ const Footer: React.FC = () => {
               <div className="text-gray-300">23 Gwarimpa Avenue, Abuja, Nigeria</div>
 
               <a
-                href="tel:(480)555-0103"
+                href={import.meta.env.VITE_C0MPANY_PHONE_NUMBER}
                 className="hover:text-alternativePastelYellow block text-gray-300 transition-colors duration-200"
               >
-                (480) 555-0103
+                {import.meta.env.VITE_C0MPANY_PHONE_NUMBER}
               </a>
 
               <a
-                href="mailto:hello@citadel.io"
+                href={import.meta.env.VITE_C0MPANY_EMAIL}
                 className="hover:text-alternativePastelYellow block text-gray-300 transition-colors duration-200"
               >
-                hello@company.io
+                {import.meta.env.VITE_C0MPANY_EMAIL}
               </a>
             </div>
 

@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import Hero from '@/components/layout/Hero';
-import FeaturedListings from '@/components/layout/FeaturedListings';
-import Faq from '@/components/layout/Faq';
-import ContactSection from '@/components/layout/ContactSection';
-import OurStory from '@/components/layout/OurStory';
-import ClientsTestimonials from '@/components/layout/ClientsTestimonials';
-import LandingPageCommunities from '@/components/layout/LandingPageCommunities';
-import NewsUpdate from '@/components/layout/NewsUpdate';
-import Footer from '@/components/layout/Footer';
+import Hero from '@/components/layout/landing/Hero';
+import FeaturedListings from '@/components/layout/landing/FeaturedListings';
+import Faq from '@/components/layout/landing/Faq';
+import ContactSection from '@/components/layout/landing/ContactSection';
+import OurStory from '@/components/layout/landing/OurStory';
+import ClientsTestimonials from '@/components/layout/landing/ClientsTestimonials';
+import LandingPageCommunities from '@/components/layout/landing/LandingPageCommunities';
+import NewsUpdate from '@/components/layout/landing/NewsUpdate';
+import Footer from '@/components/common/Footer';
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

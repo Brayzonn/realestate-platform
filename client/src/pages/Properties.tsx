@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import Nav from '@/components/layout/Nav';
-import NavMenu from '@/components/layout/NavMenu';
-import Footer from '@/components/layout/Footer';
-import AllListings from '@/components/layout/AllListings';
+import Nav from '@/components/common/Nav';
+import NavMenu from '@/components/common/NavMenu';
+import Footer from '@/components/common/Footer';
+import AllListings from '@/components/layout/properties/AllListings';
 import companylogoblack from '@/assets/images/companylogoblack.svg';
 
 const Properties = () => {

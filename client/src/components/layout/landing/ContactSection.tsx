@@ -35,7 +35,9 @@ const ContactSection = () => {
                     <span className="font-medium text-gray-600">Phone</span>
                   </div>
                   <div className="sm:text-right">
-                    <p className="font-medium text-gray-900">(80) 535-010334</p>
+                    <p className="font-medium text-gray-900">
+                      {import.meta.env.VITE_C0MPANY_PHONE_NUMBER}
+                    </p>
                     <p className="text-sm text-gray-500">Call for assistance</p>
                   </div>
                 </div>
@@ -47,7 +49,7 @@ const ContactSection = () => {
                   </div>
                   <div className="sm:text-right">
                     <p className="font-medium break-all text-gray-900 sm:break-normal">
-                      info@yourcompany.com
+                      {import.meta.env.VITE_C0MPANY_EMAIL}
                     </p>
                     <p className="text-sm text-gray-500">Send us an email</p>
                   </div>

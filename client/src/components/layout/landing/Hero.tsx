@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NavMenu from '@/components/layout/NavMenu';
+import NavMenu from '@/components/common/NavMenu';
 import { useHeader } from '@/hooks/useHeader';
-import Nav from '@/components/layout/Nav';
+import Nav from '@/components/common/Nav';
 import arrowupright from '@/assets/images/arrowupright.svg';
 import companylogoblack from '@/assets/images/companylogoblack.svg';
 
