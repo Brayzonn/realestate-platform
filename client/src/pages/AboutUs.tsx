@@ -8,6 +8,7 @@ import CompanyStory from '@/components/layout/about-us/CompanyStory';
 import CompanyStats from '@/components/layout/about-us/CompanyStats';
 import CoreValues from '@/components/layout/about-us/CoreValues';
 import TeamSection from '@/components/layout/about-us/TeamSection';
+import AboutCTA from '@/components/layout/about-us/AboutCTA';
 import AwardsRecognition from '@/components/layout/about-us/AwardsRecognition';
 
 const AboutUs = () => {
@@ -35,10 +36,12 @@ const AboutUs = () => {
       <main className="mx-auto max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">
         <AboutHero />
         <CompanyStory />
+
         <CompanyStats />
         <CoreValues />
         <TeamSection />
         <AwardsRecognition />
+        <AboutCTA />
       </main>
 
       <Footer />

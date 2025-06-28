@@ -1,9 +1,9 @@
 import GoogleMap from '@/components/map/GoogleMap';
 import Button from '@/components/ui/Button';
-import arrowRight from '@/assets/images/arrowright.svg';
+import { ArrowRight } from 'lucide-react';
 import { Property } from '@/ts-types/propertyTypes';
 
-const PropertyLocation = (property: Property) => {
+const PropertyLocation = ({ property }: { property: Property }) => {
   const mapMarkers = [
     {
       position: property.coordinates,
@@ -27,19 +27,27 @@ const PropertyLocation = (property: Property) => {
   return (
     <section className="flex w-full flex-col space-y-[2rem] py-[1rem]">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <h1 className="flex w-full items-center gap-4 text-[27px] font-[900] uppercase md:text-[36px]">
-          Location Map
-          <span className="block h-[2px] w-[60px] bg-black"></span>
-        </h1>
+        <div className="text-left">
+          <div className="mb-8 flex items-center space-x-4">
+            <div className="h-px w-16 bg-yellow-400"></div>
+            <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">
+              Location
+            </span>
+          </div>
+
+          <h1 className="text-4xl leading-tight font-light text-gray-900 md:text-5xl lg:text-6xl">
+            Location <span className="font-medium">Map</span>
+          </h1>
+        </div>
 
         <Button
           variant="unstyled"
           size="unstyled"
           onClick={openDirections}
-          className="bg-alternativePastelYellow flex space-x-2 rounded-lg px-6 py-3 font-medium whitespace-nowrap text-black transition-colors duration-200 hover:bg-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:outline-none"
+          className="flex items-center space-x-3 rounded-sm bg-gray-900 px-6 py-4 font-medium whitespace-nowrap text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-[0.98]"
         >
-          <p>Get Directions</p>
-          <img src={arrowRight} alt="arrowRight" />
+          <p className="text-white">Get Directions</p>
+          <ArrowRight className="h-[15px] w-[20px] text-white" />
         </Button>
       </div>
 

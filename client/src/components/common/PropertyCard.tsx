@@ -11,55 +11,73 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const propertyLink = `/properties/${property.id}`;
 
   return (
-    <div className="overflow-hidden rounded-lg bg-white shadow-md transition-transform duration-300 hover:scale-105 hover:transform">
-      <Link to={propertyLink} className="relative block">
+    <Link
+      to={propertyLink}
+      className="group block overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
+    >
+      <div className="relative overflow-hidden">
         <img
           src={property.featuredImage}
           alt={property.title}
-          className="h-[240px] w-full object-cover"
+          className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
+
+        {/* Subtle overlay on hover */}
+        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+
+        {/* Refined category badge */}
         <span
-          className={`absolute top-4 left-4 rounded-full px-3 py-1 text-sm font-medium ${
+          className={`absolute top-5 left-5 rounded-sm px-3 py-1.5 text-xs font-medium tracking-wide backdrop-blur-sm transition-all duration-300 ${
             property.category === 'For Sale'
-              ? 'bg-green-100 text-green-800'
-              : 'bg-blue-100 text-blue-800'
+              ? 'border border-white/20 bg-white/90 text-gray-800'
+              : 'border border-white/20 bg-white/90 text-gray-800'
           }`}
         >
           {property.category}
         </span>
-      </Link>
+      </div>
 
-      <div className="p-6">
-        <p className="mb-2 text-2xl font-bold text-gray-900">{property.price}</p>
+      <div className="p-7">
+        {/* Price with cleaner typography */}
+        <p className="mb-3 text-2xl font-light tracking-tight text-gray-900">{property.price}</p>
 
-        <Link
-          to={propertyLink}
-          className="mb-4 block text-lg font-semibold text-gray-800 transition-colors duration-200 hover:text-gray-600"
-        >
+        {/* Title with subtle hover */}
+        <h3 className="mb-3 line-clamp-2 text-lg leading-snug font-medium text-gray-800 transition-colors duration-200 group-hover:text-gray-600">
           {property.title}
-        </Link>
+        </h3>
 
-        <p className="mb-4 text-sm text-gray-600">{property.location}</p>
+        {/* Location with refined styling */}
+        <p className="mb-6 text-sm font-light tracking-wide text-gray-500">{property.location}</p>
 
-        <div className="flex items-center justify-between text-sm text-gray-600">
-          <div className="flex items-center space-x-1">
-            <SquareFootIcon />
-            <span>{property.squareFeet.toLocaleString()} sq. ft.</span>
+        {/* Property details with improved layout */}
+        <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+          <div className="flex items-center space-x-1.5 text-gray-600">
+            <div className="text-gray-400">
+              <SquareFootIcon />
+            </div>
+            <span className="text-sm font-light">{property.squareFeet.toLocaleString()}</span>
+            <span className="text-xs text-gray-400">sq ft</span>
           </div>
 
-          <div className="flex items-center space-x-1">
-            <BedIcon />
-            <span>{property.bedrooms} Bed</span>
+          <div className="flex items-center space-x-1.5 text-gray-600">
+            <div className="text-gray-400">
+              <BedIcon />
+            </div>
+            <span className="text-sm font-light">{property.bedrooms}</span>
+            <span className="text-xs text-gray-400">bed</span>
           </div>
 
-          <div className="flex items-center space-x-1">
-            <BathIcon />
-            <span>{property.bathrooms} Bath</span>
+          <div className="flex items-center space-x-1.5 text-gray-600">
+            <div className="text-gray-400">
+              <BathIcon />
+            </div>
+            <span className="text-sm font-light">{property.bathrooms}</span>
+            <span className="text-xs text-gray-400">bath</span>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -27,13 +27,21 @@ const AllBlogPosts = () => {
         selectedCategory={selectedCategory}
       />
       <section className="py-8">
-        <div className="mb-8 flex items-center gap-4">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">Latest Articles</h2>
-          <span className="block h-[2px] w-[60px] bg-yellow-400"></span>
+        <div className="mb-16 text-left">
+          <div className="mb-8 flex items-center space-x-4">
+            <div className="h-px w-16 bg-yellow-400"></div>
+            <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">
+              Latest
+            </span>
+          </div>
+
+          <h2 className="text-[40px] leading-tight font-light text-gray-900 md:text-[45px] lg:text-[50px]">
+            Latest <span className="font-medium">Articles</span>
+          </h2>
         </div>
 
         {filteredPosts.length > 0 ? (
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 py-[4rem] md:grid-cols-2 lg:grid-cols-3">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}

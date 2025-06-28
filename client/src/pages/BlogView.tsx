@@ -18,7 +18,7 @@ const BlogArticle = () => {
 
   return (
     <>
-      <article className="mx-auto max-w-4xl px-4 py-8">
+      <article className="mx-auto max-w-4xl px-4 py-[4rem]">
         <Link
           to="/blog"
           className="hover:text-alternativeTextBlack mb-8 inline-flex items-center gap-2 text-gray-600 transition-colors"
@@ -97,7 +97,7 @@ const BlogArticle = () => {
         </div>
 
         {article.tags && article.tags.length > 0 && (
-          <div className="mb-8">
+          <div className="py-[7rem]">
             <h3 className="mb-4 text-lg font-semibold text-gray-900">Related Topics</h3>
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag, index) => (
@@ -112,32 +112,36 @@ const BlogArticle = () => {
           </div>
         )}
 
-        <div className="text-alternativeTextBlack relative overflow-hidden rounded-2xl py-[4rem] text-center">
-          <div className="relative z-10">
-            <Home className="mx-auto mb-4 h-12 w-12 opacity-90 drop-shadow-sm" />
-            <h3 className="mb-2 text-xl font-semibold drop-shadow-sm">
-              Ready to Find Your Dream Home?
-            </h3>
-            <p className="mb-6 opacity-90 drop-shadow-sm">
-              Let our experienced team help you navigate the real estate market and find the perfect
-              property.
-            </p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row">
+        <section className="rounded-sm border border-gray-200/60 bg-white p-12 text-center shadow-sm">
+          <div className="space-y-8">
+            <Home className="mx-auto h-12 w-12 text-gray-600" />
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-light text-gray-900">
+                Ready to Find Your <span className="font-medium">Dream Home?</span>
+              </h3>
+              <p className="mx-auto max-w-md leading-relaxed font-light text-gray-600">
+                Let our experienced team help you navigate the real estate market and find the
+                perfect property.
+              </p>
+            </div>
+
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 to="/properties"
-                className="bg-alternativePastelYellow/90 text-alternativeTextBlack hover:bg-alternativePastelYellow rounded-lg px-6 py-3 font-medium backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="rounded-sm border border-gray-300 bg-white px-8 py-4 font-medium text-gray-900 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg active:scale-[0.98]"
               >
                 Browse Properties
               </Link>
               <Link
                 to="/contact-us"
-                className="bg-alternativeTextBlack/90 hover:bg-alternativeTextBlack rounded-lg px-6 py-3 font-medium text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="rounded-sm bg-gray-900 px-8 py-4 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-[0.98]"
               >
                 Contact an Agent
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </article>
 
       <Footer />

@@ -4,12 +4,19 @@ import { propertiesData } from '@/store/data';
 import PropertyCard from '@/components/common/PropertyCard';
 import arrowRight from '@/assets/images/arrowright.svg';
 import arrowLeft from '@/assets/images/arrowleft.svg';
+import { useEffect } from 'react';
 
 const AllListings = () => {
-  const { currentItems, hasNextPage, hasPrevPage, nextPage, prevPage } = usePagination({
-    data: propertiesData,
-    itemsPerPage: 6,
-  });
+  const { currentItems, hasNextPage, hasPrevPage, nextPage, prevPage, currentPage } = usePagination(
+    {
+      data: propertiesData,
+      itemsPerPage: 6,
+    }
+  );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   return (
     <>

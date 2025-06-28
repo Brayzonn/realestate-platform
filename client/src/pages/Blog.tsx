@@ -5,7 +5,7 @@ import Footer from '@/components/common/Footer';
 import companylogoblack from '@/assets/images/companylogoblack.svg';
 import BlogHero from '@/components/layout/blog/BlogHero';
 import AllBlogPosts from '@/components/layout/blog/AllBlogPosts';
-import BlogFeaturedPost from '@/components/layout/blog/BlogFeaturedPost';
+// import BlogFeaturedPost from '@/components/layout/blog/BlogFeaturedPost';
 
 const Blog = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ const Blog = () => {
       <main className="mx-auto max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">
         <BlogHero />
 
-        <BlogFeaturedPost />
+        {/* <BlogFeaturedPost /> */}
 
         <AllBlogPosts />
       </main>

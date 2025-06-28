@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const PropertyNavigation = () => {
   return (
-    <section className="flex w-full justify-center pb-[4rem]">
+    <section className="flex w-full justify-center space-x-1 pb-[4rem]">
       <Link
         to="/properties"
-        className="group bg-alternativePastelYellow border-alternativePastelYellow focus:ring-alternativePastelYellow flex transform items-center gap-3 rounded-xl border-2 px-8 py-4 font-semibold text-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:border-black hover:bg-black hover:text-white hover:shadow-2xl focus:ring-2 focus:ring-offset-2 focus:outline-none"
+        className="flex items-center space-x-3 rounded-sm bg-gray-900 px-6 py-4 font-medium whitespace-nowrap text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-[0.98]"
       >
         <HomeIcon />
-        Explore More Properties
+        <p>Explore More Properties</p>
         <ChevronRight />
       </Link>
     </section>

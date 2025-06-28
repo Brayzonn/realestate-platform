@@ -8,6 +8,7 @@ import companylogoblack from '@/assets/images/companylogoblack.svg';
 import PropertyNavigation from '@/components/layout/properties/PropertyNavigation';
 import { propertiesData } from '@/store/data';
 import PropertyDetails from '@/components/layout/properties/PropertyDetails';
+import PropertyLocation from '@/components/layout/properties/PropertyLocation';
 
 const PropertyView = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,7 @@ const PropertyView = () => {
       <main className="mx-auto flex min-h-screen max-w-7xl flex-1 flex-col items-center space-y-[2rem] px-[1rem] pt-[3rem]">
         <PropertyDetails />
         <PropertyImageGallery property={property} />
+        <PropertyLocation property={property} />
         <PropertyNavigation />
       </main>
 

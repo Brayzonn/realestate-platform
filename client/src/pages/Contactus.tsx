@@ -6,6 +6,7 @@ import NavMenu from '@/components/common/NavMenu';
 import ContactHero from '@/components/layout/contact-us/ContactHero';
 import OfficeLocationMap from '@/components/layout/contact-us/OfficeLocationMap';
 import ContactMethods from '@/components/layout/contact-us/ContactMethods';
+import ContactFormSection from '@/components/layout/contact-us/ContactFormSection';
 
 const Contactus = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Contactus = () => {
 
       <main className="mx-auto max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">
         <ContactHero />
+        <ContactFormSection />
 
         <ContactMethods />
 

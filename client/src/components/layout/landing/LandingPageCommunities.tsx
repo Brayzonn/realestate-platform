@@ -38,48 +38,57 @@ const LandingPageCommunities: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16">
-      <div className="mb-12 flex flex-col items-start justify-start text-left">
-        <div className="mb-4 flex items-center justify-start space-x-4">
-          <div className="h-[2px] w-12 bg-yellow-400"></div>
-          <h2 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
-            communities
-          </h2>
+    <div className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
+      <div className="mb-20 text-left">
+        <div className="mb-8 flex items-center space-x-4">
+          <div className="h-px w-16 bg-yellow-400"></div>
+          <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">
+            Communities
+          </span>
         </div>
-        <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
-          Discover Our Communities
+
+        <h2 className="mb-6 text-4xl leading-tight font-light text-gray-900 md:text-5xl lg:text-6xl">
+          Discover Our <span className="font-medium">Communities</span>
         </h2>
-        <p className="w-full max-w-2xl text-left text-lg text-gray-600">
+
+        <p className="max-w-3xl text-lg leading-relaxed font-light text-gray-600">
           Explore thoughtfully designed neighborhoods that offer the perfect blend of comfort,
-          convenience, and community living.
+          convenience, and community living crafted for modern lifestyles.
         </p>
       </div>
 
-      <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {communities.slice(0, 3).map((community) => (
           <div
             key={community.id}
-            className="group overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-xl"
+            className="group overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
           >
             <div className="aspect-video overflow-hidden">
               <img
                 src={community.image}
                 alt={community.name}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            <div className="p-6">
-              <h3 className="mb-3 text-xl font-semibold text-gray-900">{community.name}</h3>
-              <p className="mb-4 line-clamp-2 text-gray-600">{community.description}</p>
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
+
+            <div className="p-7">
+              <h3 className="mb-4 text-xl leading-snug font-medium text-gray-900">
+                {community.name}
+              </h3>
+
+              <p className="mb-6 line-clamp-2 leading-relaxed font-light text-gray-600">
+                {community.description}
+              </p>
+
+              <div className="space-y-4 border-t border-gray-100 pt-4">
+                <h4 className="text-xs font-medium tracking-[0.2em] text-gray-500 uppercase">
                   Key Features
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {community.features.map((feature, index) => (
                     <span
                       key={index}
-                      className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+                      className="rounded-sm border border-gray-200/60 bg-gray-50 px-3 py-1.5 text-sm font-light text-gray-700 transition-colors hover:bg-gray-100"
                     >
                       {feature}
                     </span>
@@ -94,10 +103,15 @@ const LandingPageCommunities: React.FC = () => {
       <div className="text-center">
         <Link
           to="/communities"
-          className="hover:bg-alternativePastelYellow hover:text-alternativeTextBlack hover:border-alternativePastelYellow inline-flex items-center space-x-2 rounded-md border border-black bg-black px-6 py-4 text-sm font-medium text-white transition-colors duration-200"
+          className="group inline-flex items-center space-x-3 rounded-sm bg-gray-900 px-8 py-4 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-[0.98]"
         >
           <span>View All Communities</span>
-          <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -71,31 +71,33 @@ const ClientsTestimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="bg-white py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="bg-gray-50 py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="testimonial-wrap">
-          <div className="mb-12 flex flex-col items-start text-center">
-            <div className="mb-4 flex items-center justify-center space-x-4">
-              <div className="h-[2px] w-12 bg-yellow-400"></div>
-              <h2 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
-                testimonials
-              </h2>
+          <div className="mb-20 text-center">
+            <div className="mb-8 flex items-center justify-center space-x-4">
+              <div className="h-px w-16 bg-yellow-400"></div>
+              <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">
+                Testimonials
+              </span>
+              <div className="h-px w-16 bg-yellow-400"></div>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
-              Clients Reviews
+
+            <h2 className="text-4xl leading-tight font-light text-gray-900 md:text-5xl lg:text-6xl">
+              Client <span className="font-medium">Reviews</span>
             </h2>
           </div>
 
           <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-700 ease-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {testimonials.map((testimonial) => (
                   <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                    <div className="testimonial-content mx-auto max-w-4xl">
-                      <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
+                    <div className="testimonial-content mx-auto max-w-5xl">
+                      <div className="overflow-hidden rounded-sm border border-gray-200/60 bg-white shadow-sm">
                         <div className="grid grid-cols-1 md:grid-cols-2">
                           <div className="testimonial-slider_item relative">
                             <div className="relative aspect-[4/3] md:aspect-[3/4]">
@@ -104,23 +106,23 @@ const ClientsTestimonials: React.FC = () => {
                                 alt={testimonial.name}
                                 className="h-full w-full object-cover"
                               />
-                              <div className="testimonial-slider_overlay absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
                           </div>
 
-                          <div className="testimonial-ccright flex flex-col justify-center p-8 md:p-10 lg:p-12">
-                            <div className="space-y-6">
-                              <p className="review-text text-lg leading-relaxed text-gray-700 md:text-xl">
+                          <div className="flex flex-col justify-center p-10 md:p-12 lg:p-16">
+                            <div className="space-y-8">
+                              <blockquote className="text-xl leading-relaxed font-light text-gray-700 md:text-2xl">
                                 &quot;{testimonial.review}&quot;
-                              </p>
+                              </blockquote>
 
-                              <div>
-                                <h3 className="mb-1 text-xl font-bold text-gray-900 md:text-2xl">
+                              <div className="border-t border-gray-100 pt-4">
+                                <h3 className="mb-2 text-lg font-medium text-gray-900">
                                   {testimonial.name}
                                 </h3>
-                                <div className="opacity-60">
-                                  <p className="text-sm text-gray-600">{testimonial.title}</p>
-                                </div>
+                                <p className="text-sm font-light tracking-wide text-gray-500 uppercase">
+                                  {testimonial.title}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -137,10 +139,8 @@ const ClientsTestimonials: React.FC = () => {
               className="testimonial-slider_arrow group absolute top-1/2 left-4 hidden -translate-y-1/2 md:block"
               aria-label="Previous testimonial"
             >
-              <div className="relative">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 group-hover:shadow-xl">
-                  <ChevronLeft className="h-5 w-5 text-gray-700" />
-                </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
+                <ChevronLeft className="h-5 w-5 text-gray-600" />
               </div>
             </button>
 
@@ -149,20 +149,18 @@ const ClientsTestimonials: React.FC = () => {
               className="testimonial-slider_arrow group absolute top-1/2 right-4 hidden -translate-y-1/2 md:block"
               aria-label="Next testimonial"
             >
-              <div className="relative">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 group-hover:shadow-xl">
-                  <ChevronRight className="h-5 w-5 text-gray-700" />
-                </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
+                <ChevronRight className="h-5 w-5 text-gray-600" />
               </div>
             </button>
 
-            <div className="hidden">
+            <div className="mt-12 flex justify-center space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`mx-1 h-3 w-3 rounded-full ${
-                    index === currentSlide ? 'bg-blue-500' : 'bg-gray-300'
+                  className={`h-2 w-8 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-gray-800' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Show slide ${index + 1} of ${testimonials.length}`}
                 />

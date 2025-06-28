@@ -12,11 +12,11 @@ const OurStory: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState<boolean>(false);
 
-  const videoUrl = "https://www.youtube.com/embed/GrG-Ee9rAzE";
+  const videoUrl = 'https://www.youtube.com/embed/GrG-Ee9rAzE';
 
   const counterData: CounterData[] = [
-    { value: "10+", label: "Years of Experience" },
-    { value: "522+", label: "Completed Projects" },
+    { value: '10+', label: 'Years of Experience' },
+    { value: '522+', label: 'Completed Projects' },
   ];
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const OurStory: React.FC = () => {
 
   const openVideoModal = (): void => {
     setIsVideoModalOpen(true);
-    setIsAutoPlaying(false); 
+    setIsAutoPlaying(false);
   };
 
   const closeVideoModal = (): void => {
@@ -67,8 +67,8 @@ const OurStory: React.FC = () => {
     };
 
     if (isVideoModalOpen) {
-        document.addEventListener('keydown', handleEscapeKey);
-        document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
@@ -78,48 +78,47 @@ const OurStory: React.FC = () => {
   }, [isVideoModalOpen]);
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-          <div className="space-y-8">
+    <section id="about" className="bg-white py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-12">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-[2px] bg-yellow-400"></div>
-              <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+              <div className="h-px w-16 bg-yellow-400"></div>
+              <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">
                 Tailored For You
-              </h2>
+              </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Our Story & Vision
-            </h2>
+            <div className="space-y-6">
+              <h2 className="text-4xl leading-tight font-light text-gray-900 md:text-5xl lg:text-6xl">
+                Our Story & <span className="font-medium">Vision</span>
+              </h2>
 
-            <div className="text-gray-600">
-              <p className="text-lg leading-relaxed">
-               With years of experience in real estate development, we specialize in creating properties that appreciate in value and inspire living. Our team blends market expertise with architectural excellence to deliver extraordinary developments.
+              <p className="max-w-3xl text-lg leading-relaxed font-light text-gray-600">
+                With years of experience in real estate development, we specialize in creating
+                properties that appreciate in value and inspire living. Our team blends market
+                expertise with architectural excellence to deliver extraordinary developments.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+            <div className="grid grid-cols-2 gap-8 border-t border-gray-100 pt-8 lg:grid-cols-4">
               {counterData.map((counter, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                  <h3 className="mb-2 text-3xl font-light text-gray-900 md:text-4xl">
                     {counter.value}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm font-light tracking-wide text-gray-500 uppercase">
                     {counter.label}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-
-          <div 
-            className="relative rounded-2xl overflow-hidden shadow-2xl group"
+          <div
+            className="group relative overflow-hidden rounded-2xl shadow-2xl"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-
             <div className="relative h-96 md:h-[500px] lg:h-[600px]">
               {slideImages.map((image, index) => (
                 <div
@@ -128,49 +127,43 @@ const OurStory: React.FC = () => {
                     index === currentSlide ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={image.url} alt={image.alt} className="h-full w-full object-cover" />
                 </div>
               ))}
 
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <button 
-                  className="w-16 h-16 md:w-20 md:h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
+              <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <button
+                  className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-all duration-200 hover:scale-110 hover:bg-white md:h-20 md:w-20"
                   onClick={openVideoModal}
                   aria-label="Play video"
                 >
-                  <Play className="w-6 h-6 md:w-8 md:h-8 text-gray-800 ml-1" fill="currentColor" />
+                  <Play className="ml-1 h-6 w-6 text-gray-800 md:h-8 md:w-8" fill="currentColor" />
                 </button>
               </div>
 
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all duration-200 opacity-0 group-hover:opacity-100 z-30"
+                className="absolute top-1/2 left-4 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 opacity-0 shadow-md transition-all duration-200 group-hover:opacity-100 hover:bg-white"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-5 h-5 text-gray-800" />
+                <ChevronLeft className="h-5 w-5 text-gray-800" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all duration-200 opacity-0 group-hover:opacity-100 z-30"
+                className="absolute top-1/2 right-4 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 opacity-0 shadow-md transition-all duration-200 group-hover:opacity-100 hover:bg-white"
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-5 h-5 text-gray-800" />
+                <ChevronRight className="h-5 w-5 text-gray-800" />
               </button>
 
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-30">
+              <div className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 space-x-2">
                 {slideImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      index === currentSlide 
-                        ? 'bg-white w-8' 
-                        : 'bg-white/60 hover:bg-white/80'
+                    className={`h-2 w-2 rounded-full transition-all duration-200 ${
+                      index === currentSlide ? 'w-8 bg-white' : 'bg-white/60 hover:bg-white/80'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
@@ -178,32 +171,32 @@ const OurStory: React.FC = () => {
               </div>
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-0" />
+            <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
         </div>
       </div>
 
       {isVideoModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <button 
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-default"
+          <button
+            className="absolute inset-0 cursor-default bg-black/80 backdrop-blur-sm"
             onClick={closeVideoModal}
             aria-label="Close video modal"
             type="button"
           />
-          
-          <div className="relative w-full max-w-4xl mx-4 bg-white rounded-lg overflow-hidden shadow-2xl">
+
+          <div className="relative mx-4 w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-2xl">
             <button
               onClick={closeVideoModal}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors duration-200"
+              className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition-colors duration-200 hover:bg-black/70"
               aria-label="Close video"
             >
-              <X className="w-5 h-5" />
+              <X className="h-5 w-5" />
             </button>
-            
+
             <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
               <iframe
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 h-full w-full"
                 src={`${videoUrl}?autoplay=1`}
                 title="Our Story Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

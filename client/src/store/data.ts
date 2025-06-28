@@ -255,7 +255,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'top-10-home-buying-tips-first-time-buyers',
     excerpt:
       'Navigate the home buying process with confidence. Our comprehensive guide covers everything from pre-approval to closing day.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'Sarah Johnson',
       avatar:
@@ -278,7 +279,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'understanding-real-estate-market-trends-2024',
     excerpt:
       'Get insights into the latest market trends, pricing patterns, and what to expect in the real estate landscape this year.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'Michael Chen',
       avatar:
@@ -301,7 +303,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-to-stage-home-quick-sale',
     excerpt:
       'Learn professional staging techniques that help homes sell faster and for better prices. Simple tips that make a big difference.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'Emily Rodriguez',
       avatar:
@@ -324,7 +327,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'investment-property-vs-primary-residence',
     excerpt:
       'Explore the key differences between buying an investment property and a primary residence, including financing and tax implications.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'David Park',
       avatar:
@@ -347,7 +351,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'neighborhood-guide-finding-perfect-community',
     excerpt:
       'Discover how to evaluate neighborhoods beyond just the house itself. Schools, amenities, and future development matter.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'Lisa Wong',
       avatar:
@@ -370,7 +375,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'complete-guide-home-inspections',
     excerpt:
       'Everything you need to know about home inspections, from what to expect to how to interpret the results.',
-    content: 'Full blog content here...',
+    content:
+      'Welcome to company, where your journey into the world of real estate begins. Our website is your gateway to a seamless, personalized, and transformative property experience. Designed with you in mind, company offers a comprehensive platform for buyers, sellers, and investors alike.',
     author: {
       name: 'Robert Kim',
       avatar:

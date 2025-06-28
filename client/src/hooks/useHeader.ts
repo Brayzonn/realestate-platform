@@ -4,7 +4,7 @@ interface UseHeaderOptions {
   scrollThreshold?: number;
 }
 
-export const useHeader = ({ scrollThreshold = 1000 }: UseHeaderOptions = {}) => {
+export const useHeader = ({ scrollThreshold = 800 }: UseHeaderOptions = {}) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
