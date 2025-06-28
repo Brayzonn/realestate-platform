@@ -1,5 +1,6 @@
 import { Property, SlideImage } from '@/ts-types/propertyTypes';
 import { Communities } from '@/ts-types/communityTypes';
+import { BlogPost } from '@/ts-types/blogTypes';
 
 export const propertiesData: Property[] = [
   {
@@ -244,5 +245,146 @@ export const slideImages: SlideImage[] = [
   {
     url: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80',
     alt: 'Stylish home office space',
+  },
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Top 10 Home Buying Tips for First-Time Buyers',
+    slug: 'top-10-home-buying-tips-first-time-buyers',
+    excerpt:
+      'Navigate the home buying process with confidence. Our comprehensive guide covers everything from pre-approval to closing day.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'Sarah Johnson',
+      avatar:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Senior Real Estate Agent',
+    },
+    publishedAt: '2024-01-15',
+    readTime: '8 min read',
+    category: 'Buying Guide',
+    tags: ['First Time Buyers', 'Home Buying', 'Tips'],
+    featured: true,
+    image:
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 1245,
+    likes: 89,
+  },
+  {
+    id: '2',
+    title: 'Understanding Real Estate Market Trends in 2024',
+    slug: 'understanding-real-estate-market-trends-2024',
+    excerpt:
+      'Get insights into the latest market trends, pricing patterns, and what to expect in the real estate landscape this year.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'Michael Chen',
+      avatar:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Market Analyst',
+    },
+    publishedAt: '2024-01-12',
+    readTime: '6 min read',
+    category: 'Market Analysis',
+    tags: ['Market Trends', '2024', 'Investment'],
+    featured: false,
+    image:
+      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 892,
+    likes: 56,
+  },
+  {
+    id: '3',
+    title: 'How to Stage Your Home for a Quick Sale',
+    slug: 'how-to-stage-home-quick-sale',
+    excerpt:
+      'Learn professional staging techniques that help homes sell faster and for better prices. Simple tips that make a big difference.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'Emily Rodriguez',
+      avatar:
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Interior Design Specialist',
+    },
+    publishedAt: '2024-01-10',
+    readTime: '5 min read',
+    category: 'Selling Tips',
+    tags: ['Home Staging', 'Selling', 'Interior Design'],
+    featured: false,
+    image:
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 1567,
+    likes: 134,
+  },
+  {
+    id: '4',
+    title: 'Investment Property vs. Primary Residence: What You Need to Know',
+    slug: 'investment-property-vs-primary-residence',
+    excerpt:
+      'Explore the key differences between buying an investment property and a primary residence, including financing and tax implications.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'David Park',
+      avatar:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Investment Advisor',
+    },
+    publishedAt: '2024-01-08',
+    readTime: '10 min read',
+    category: 'Investment',
+    tags: ['Investment', 'Finance', 'Property'],
+    featured: false,
+    image:
+      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 743,
+    likes: 67,
+  },
+  {
+    id: '5',
+    title: 'Neighborhood Guide: Finding the Perfect Community',
+    slug: 'neighborhood-guide-finding-perfect-community',
+    excerpt:
+      'Discover how to evaluate neighborhoods beyond just the house itself. Schools, amenities, and future development matter.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'Lisa Wong',
+      avatar:
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Community Specialist',
+    },
+    publishedAt: '2024-01-05',
+    readTime: '7 min read',
+    category: 'Neighborhood Guide',
+    tags: ['Neighborhoods', 'Community', 'Lifestyle'],
+    featured: true,
+    image:
+      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 2103,
+    likes: 178,
+  },
+  {
+    id: '6',
+    title: 'The Complete Guide to Home Inspections',
+    slug: 'complete-guide-home-inspections',
+    excerpt:
+      'Everything you need to know about home inspections, from what to expect to how to interpret the results.',
+    content: 'Full blog content here...',
+    author: {
+      name: 'Robert Kim',
+      avatar:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+      bio: 'Licensed Inspector',
+    },
+    publishedAt: '2024-01-03',
+    readTime: '12 min read',
+    category: 'Buying Guide',
+    tags: ['Home Inspection', 'Due Diligence', 'Safety'],
+    featured: false,
+    image:
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+    views: 1834,
+    likes: 156,
   },
 ];

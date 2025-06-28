@@ -1,61 +1,7 @@
-import React from 'react';
+import { blogPosts } from '@/store/data';
+import { Link } from 'react-router-dom';
 
-interface Article {
-  id: string;
-  href: string;
-  title: string;
-  date: string;
-  image: {
-    src: string;
-    alt: string;
-    srcset: string;
-    sizes: string;
-  };
-}
-
-const NewsUpdate: React.FC = () => {
-  const articles: Article[] = [
-    {
-      id: '1',
-      href: '/blog/understanding-mortgages-a-guide-for-first-time-homebuyers',
-      title: 'Understanding mortgages a guide for first-time homebuyers',
-      date: 'Oct 18, 2023',
-      image: {
-        src: 'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b63c00a3f01bf7ca9d58_blog-thumb-07.jpg',
-        alt: '',
-        srcset:
-          'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b63c00a3f01bf7ca9d58_blog-thumb-07-p-500.jpg 500w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b63c00a3f01bf7ca9d58_blog-thumb-07-p-800.jpg 800w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b63c00a3f01bf7ca9d58_blog-thumb-07.jpg 824w',
-        sizes: '(max-width: 479px) 91vw, (max-width: 767px) 95vw, (max-width: 991px) 47vw, 30vw',
-      },
-    },
-    {
-      id: '2',
-      href: '/blog/the-importance-of-location-choosing-the-right-area-for-you',
-      title: 'The importance of location choosing the right area for you',
-      date: 'Oct 18, 2023',
-      image: {
-        src: 'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b683f2ed6d97e98d0fec_blog-thumb-06.jpg',
-        alt: '',
-        srcset:
-          'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b683f2ed6d97e98d0fec_blog-thumb-06-p-500.jpg 500w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b683f2ed6d97e98d0fec_blog-thumb-06-p-800.jpg 800w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b683f2ed6d97e98d0fec_blog-thumb-06.jpg 824w',
-        sizes: '(max-width: 479px) 91vw, (max-width: 767px) 95vw, (max-width: 991px) 47vw, 30vw',
-      },
-    },
-    {
-      id: '3',
-      href: '/blog/the-future-of-real-estate-trends-shaping-the-industry',
-      title: 'The future of real estate trends shaping the industry',
-      date: 'Oct 18, 2023',
-      image: {
-        src: 'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b696c50e78dccaec1090_blog-thumb-05.jpg',
-        alt: '',
-        srcset:
-          'https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b696c50e78dccaec1090_blog-thumb-05-p-500.jpg 500w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b696c50e78dccaec1090_blog-thumb-05-p-800.jpg 800w, https://cdn.prod.website-files.com/65127446160a3ff5b1e6186c/6512b696c50e78dccaec1090_blog-thumb-05.jpg 824w',
-        sizes: '(max-width: 479px) 91vw, (max-width: 767px) 95vw, (max-width: 991px) 47vw, 30vw',
-      },
-    },
-  ];
-
+const NewsUpdate = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16">
       <div className="mb-12 flex flex-col items-start text-center">
@@ -68,29 +14,27 @@ const NewsUpdate: React.FC = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
+        {blogPosts.map((article) => (
           <div key={article.id} className="group">
-            <a
-              href={article.href}
+            <Link
+              to={`/blog/${article.id}`}
               className="block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl"
             >
               <div className="aspect-video overflow-hidden">
                 <img
                   loading="lazy"
-                  src={article.image.src}
-                  alt={article.image.alt}
-                  sizes={article.image.sizes}
-                  srcSet={article.image.srcset}
+                  src={article.image}
+                  alt={`image${article.id}`}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h4 className="mb-3 line-clamp-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+                <h4 className="mb-3 line-clamp-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-yellow-600">
                   {article.title}
                 </h4>
-                <p className="text-sm font-medium text-gray-500">{article.date}</p>
+                <p className="text-sm font-medium text-gray-500">{article.publishedAt}</p>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>

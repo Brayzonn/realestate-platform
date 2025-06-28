@@ -5,7 +5,9 @@ import AboutUs from '@/pages/AboutUs';
 import PropertyView from '@/pages/PropertyView';
 import ScrollToTop from '@/components/common/ScrollToTop';
 import Contactus from './pages/Contactus';
+import Blog from './pages/Blog';
 import Communities from './pages/Communities';
+import BlogView from './pages/BlogView';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/Contact-us" element={<Contactus />} />
-        <Route path="/Communities" element={<Communities />} />
+        <Route path="/contact-us" element={<Contactus />} />
+        <Route path="/communities" element={<Communities />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogView />} />
         <Route path="/properties" element={<Properties />} />
         <Route path="/properties/:id" element={<PropertyView />} />
         <Route path="*" element={<Landing />} />

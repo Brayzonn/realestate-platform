@@ -1,25 +1,9 @@
 import { propertiesData } from '@/store/data';
 import { useParams, Navigate } from 'react-router-dom';
 import Button from '@/components/ui/Button';
+import { formatNumber } from '@/utils';
 
 const PropertyDetails = () => {
-  const formatNumber = (num: number) => {
-    const numbers = [
-      'Zero',
-      'One',
-      'Two',
-      'Three',
-      'Four',
-      'Five',
-      'Six',
-      'Seven',
-      'Eight',
-      'Nine',
-      'Ten',
-    ];
-    return numbers[num] || num.toString();
-  };
-
   const { id } = useParams<{ id: string }>();
   const property = propertiesData.find((selectedProperty) => selectedProperty.id === id);
 

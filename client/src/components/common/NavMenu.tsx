@@ -11,6 +11,7 @@ const NavMenu = ({ isOpen, onToggle }: NavMenuProps) => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Properties', href: '/properties' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Communities', href: '/communities' },
     { name: 'Contact Us', href: '/contact-us' },
   ];

@@ -8,7 +8,7 @@ import { TwitterIcon, FacebookIcon, YouTubeIcon, InstagramIcon } from '@/compone
 //   email: string;
 // }
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -36,15 +36,17 @@ const Footer: React.FC = () => {
   };
 
   const navigationLinks = [
+    { label: 'Homw', href: '/' },
     { label: 'About Us', href: '/about' },
     { label: 'Properties', href: '/properties' },
     { label: 'Communities', href: '/communities' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact Us', href: '/contact-us' },
   ];
 
   const utilityLinks = [
     { label: 'Privacy Policy', href: '/privacy-policy' },
-    { label: "FAQ's", href: '/faqs' },
+    { label: "FAQ's", href: '/' },
   ];
 
   const socialLinks = [
