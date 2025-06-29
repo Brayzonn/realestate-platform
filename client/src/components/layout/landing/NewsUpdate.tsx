@@ -19,7 +19,7 @@ const NewsUpdate = () => {
         {blogPosts.slice(0, 3).map((article) => (
           <div key={article.id} className="group">
             <Link
-              to={`/blog/${article.id}`}
+              to={`/blog/${article.slug}`}
               className="block overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
             >
               <div className="aspect-video overflow-hidden">
