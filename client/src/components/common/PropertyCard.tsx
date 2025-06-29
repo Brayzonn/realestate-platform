@@ -23,7 +23,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           loading="lazy"
         />
 
-        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+        {/* Persistent dark overlay to reduce brightness */}
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Hover overlay for additional effect */}
+        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30"></div>
 
         <span
           className={`absolute top-5 left-5 rounded-sm px-3 py-1.5 text-xs font-medium tracking-wide backdrop-blur-sm transition-all duration-300 ${

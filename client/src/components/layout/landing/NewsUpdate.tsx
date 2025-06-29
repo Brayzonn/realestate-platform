@@ -22,13 +22,16 @@ const NewsUpdate = () => {
               to={`/blog/${article.slug}`}
               className="block overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   loading="lazy"
                   src={article.image}
                   alt={`image${article.id}`}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/20"></div>
+
+                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30"></div>
               </div>
 
               <div className="p-7">
