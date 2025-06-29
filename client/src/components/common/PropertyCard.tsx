@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Property } from '@/ts-types/propertyTypes';
-import { SquareFootIcon, BedIcon, BathIcon } from '@/components/icons/Index';
+import { SquareFootIcon, BedIcon, BathIcon } from '@/components/icons';
 
 interface PropertyCardProps {
   property: Property;
@@ -23,10 +23,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           loading="lazy"
         />
 
-        {/* Subtle overlay on hover */}
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
 
-        {/* Refined category badge */}
         <span
           className={`absolute top-5 left-5 rounded-sm px-3 py-1.5 text-xs font-medium tracking-wide backdrop-blur-sm transition-all duration-300 ${
             property.category === 'For Sale'
@@ -39,18 +37,14 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       </div>
 
       <div className="p-7">
-        {/* Price with cleaner typography */}
         <p className="mb-3 text-2xl font-light tracking-tight text-gray-900">{property.price}</p>
 
-        {/* Title with subtle hover */}
         <h3 className="mb-3 line-clamp-2 text-lg leading-snug font-medium text-gray-800 transition-colors duration-200 group-hover:text-gray-600">
           {property.title}
         </h3>
 
-        {/* Location with refined styling */}
         <p className="mb-6 text-sm font-light tracking-wide text-gray-500">{property.location}</p>
 
-        {/* Property details with improved layout */}
         <div className="flex items-center justify-between border-t border-gray-100 pt-4">
           <div className="flex items-center space-x-1.5 text-gray-600">
             <div className="text-gray-400">

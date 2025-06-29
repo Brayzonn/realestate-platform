@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import NavMenu from '@/components/common/NavMenu';
 import Nav from '@/components/common/Nav';
@@ -11,6 +11,13 @@ import PropertyDetails from '@/components/layout/properties/PropertyDetails';
 import PropertyLocation from '@/components/layout/properties/PropertyLocation';
 
 const PropertyView = () => {
+  useEffect(() => {
+    const checkForStoredPropertyData = sessionStorage.getItem('selectedProperty');
+
+    if (checkForStoredPropertyData) {
+      sessionStorage.removeItem('selectedProperty');
+    }
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

@@ -2,9 +2,9 @@ import { communitiesData } from '@/store/data';
 
 const AllComunities = () => {
   return (
-    <section className="py-24">
+    <section className="pb-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {communitiesData.map((community, index) => (
             <div
               key={index}

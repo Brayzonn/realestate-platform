@@ -95,7 +95,9 @@ const ContactSection = () => {
                 <Button
                   variant="unstyled"
                   size="unstyled"
-                  onClick={() => console.log('Call now clicked')}
+                  onClick={() =>
+                    (window.location.href = `tel:${import.meta.env.VITE_C0MPANY_PHONE_NUMBER}`)
+                  }
                   className="flex w-full items-center justify-center gap-3 rounded-sm bg-gray-900 px-6 py-4 font-medium text-white transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-[0.98]"
                 >
                   <Phone className="h-5 w-5" />

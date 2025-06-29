@@ -8,6 +8,7 @@ import Contactus from './pages/Contactus';
 import Blog from './pages/Blog';
 import Communities from './pages/Communities';
 import BlogView from './pages/BlogView';
+import PropertyInquiry from './components/layout/properties/PropertyInquiry';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path="/properties" element={<Properties />} />
         <Route path="/properties/:id" element={<PropertyView />} />
+        <Route path="/properties/:id/inquiry" element={<PropertyInquiry />} />
         <Route path="*" element={<Landing />} />
       </Routes>
     </Router>

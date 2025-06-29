@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Testimonial {
@@ -10,8 +10,9 @@ interface Testimonial {
 }
 
 const ClientsTestimonials: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(1);
   const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   const testimonials: Testimonial[] = [
     {
@@ -40,26 +41,48 @@ const ClientsTestimonials: React.FC = () => {
     },
   ];
 
+  const extendedTestimonials = [
+    testimonials[testimonials.length - 1],
+    ...testimonials,
+    testimonials[0],
+  ];
+
+  const handleTransitionEnd = useCallback(() => {
+    setIsTransitioning(false);
+
+    if (currentSlide === 0) {
+      setCurrentSlide(testimonials.length);
+    } else if (currentSlide === testimonials.length + 1) {
+      setCurrentSlide(1);
+    }
+  }, [currentSlide, testimonials.length]);
+
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || isTransitioning) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+      nextSlide();
+    }, 4500);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
+  }, []);
 
   const nextSlide = (): void => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev + 1);
   };
 
   const prevSlide = (): void => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev - 1);
   };
 
   const goToSlide = (index: number): void => {
-    setCurrentSlide(index);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index + 1);
   };
 
   const handleMouseEnter = (): void => {
@@ -68,6 +91,12 @@ const ClientsTestimonials: React.FC = () => {
 
   const handleMouseLeave = (): void => {
     setIsAutoPlaying(true);
+  };
+
+  const getCurrentDotIndex = () => {
+    if (currentSlide === 0) return testimonials.length - 1;
+    if (currentSlide === testimonials.length + 1) return 0;
+    return currentSlide - 1;
   };
 
   return (
@@ -91,11 +120,12 @@ const ClientsTestimonials: React.FC = () => {
           <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-700 ease-out"
+                className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                onTransitionEnd={handleTransitionEnd}
               >
-                {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
+                {extendedTestimonials.map((testimonial, index) => (
+                  <div key={`${testimonial.id}-${index}`} className="w-full flex-shrink-0 px-4">
                     <div className="testimonial-content mx-auto max-w-5xl">
                       <div className="overflow-hidden rounded-sm border border-gray-200/60 bg-white shadow-sm">
                         <div className="grid grid-cols-1 md:grid-cols-2">
@@ -105,6 +135,7 @@ const ClientsTestimonials: React.FC = () => {
                                 src={testimonial.image}
                                 alt={testimonial.name}
                                 className="h-full w-full object-cover"
+                                loading="lazy"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
@@ -136,20 +167,22 @@ const ClientsTestimonials: React.FC = () => {
 
             <button
               onClick={prevSlide}
-              className="testimonial-slider_arrow group absolute top-1/2 left-4 hidden -translate-y-1/2 md:block"
+              disabled={isTransitioning}
+              className="testimonial-slider_arrow group absolute top-1/2 left-4 hidden -translate-y-1/2 transition-opacity duration-200 disabled:opacity-50 md:block"
               aria-label="Previous testimonial"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:scale-105 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
                 <ChevronLeft className="h-5 w-5 text-gray-600" />
               </div>
             </button>
 
             <button
               onClick={nextSlide}
-              className="testimonial-slider_arrow group absolute top-1/2 right-4 hidden -translate-y-1/2 md:block"
+              disabled={isTransitioning}
+              className="testimonial-slider_arrow group absolute top-1/2 right-4 hidden -translate-y-1/2 transition-opacity duration-200 disabled:opacity-50 md:block"
               aria-label="Next testimonial"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200/60 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:scale-105 group-hover:border-gray-300 group-hover:bg-white group-hover:shadow-md">
                 <ChevronRight className="h-5 w-5 text-gray-600" />
               </div>
             </button>
@@ -159,8 +192,11 @@ const ClientsTestimonials: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`h-2 w-8 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-gray-800' : 'bg-gray-300 hover:bg-gray-400'
+                  disabled={isTransitioning}
+                  className={`h-2 w-8 rounded-full transition-all duration-300 disabled:opacity-50 ${
+                    index === getCurrentDotIndex()
+                      ? 'scale-110 bg-gray-800'
+                      : 'bg-gray-300 hover:scale-105 hover:bg-gray-400'
                   }`}
                   aria-label={`Show slide ${index + 1} of ${testimonials.length}`}
                 />

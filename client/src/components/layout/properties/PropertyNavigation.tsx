@@ -1,5 +1,5 @@
-import { HomeIcon } from '@/components/icons/Index';
-import { ChevronRight } from '@/components/icons/Index';
+import { HomeIcon } from '@/components/icons';
+import { ChevronRight } from '@/components/icons';
 import { Link } from 'react-router-dom';
 
 const PropertyNavigation = () => {

@@ -164,7 +164,7 @@ export const communitiesData: Communities[] = [
   {
     id: '23',
     name: 'Maple Heights',
-    avgPrice: '$650,000',
+    avgPrice: '₦70,000,000',
     description:
       'Established suburban neighborhood with tree-lined streets, excellent schools, and family-friendly amenities. Perfect for growing families and professionals seeking quiet residential living.',
     highlights: ['Top-Rated Schools', 'Family Parks', 'Single Family Homes', 'Community Center'],
@@ -175,7 +175,7 @@ export const communitiesData: Communities[] = [
   {
     id: '13',
     name: 'Oakwood Estates',
-    avgPrice: '$825,000',
+    avgPrice: '₦95,000,000',
     description:
       'Premium suburban community featuring executive homes, manicured landscapes, and exclusive amenities. Luxury living in a peaceful residential setting.',
     highlights: ['Executive Homes', 'Golf Course Access', 'Gated Community', 'Luxury Amenities'],
@@ -186,7 +186,7 @@ export const communitiesData: Communities[] = [
   {
     id: '63',
     name: 'Heritage Village',
-    avgPrice: '$485,000',
+    avgPrice: '₦185,000,000',
     description:
       'Charming suburban neighborhood with historic character, community gardens, and local shops. Perfect for those seeking authentic suburban charm and community connection.',
     highlights: ['Historic Homes', 'Community Gardens', 'Local Shops', 'Neighborhood Events'],
@@ -197,7 +197,7 @@ export const communitiesData: Communities[] = [
   {
     id: '12',
     name: 'Lakeside Commons',
-    avgPrice: '$1,250,000',
+    avgPrice: '₦170,250,000',
     description:
       'Exclusive suburban waterfront community with stunning lake views, private beaches, and resort-style amenities. The pinnacle of suburban luxury living.',
     highlights: ['Lake Views', 'Private Beach', 'Waterfront Homes', 'Marina Club'],
@@ -208,7 +208,7 @@ export const communitiesData: Communities[] = [
   {
     id: '09',
     name: 'College Park',
-    avgPrice: '$420,000',
+    avgPrice: '₦220,000,000',
     description:
       'Family-friendly suburban neighborhood near major universities. Perfect for faculty, staff, and young families seeking affordable suburban living with educational access.',
     highlights: ['University Access', 'Family Friendly', 'Affordable Homes', 'School District'],
@@ -219,7 +219,7 @@ export const communitiesData: Communities[] = [
   {
     id: '76',
     name: 'Innovation Park',
-    avgPrice: '$715,000',
+    avgPrice: '₦410,000,000',
     description:
       'Modern suburban community near major corporate campuses with contemporary homes, green spaces, and smart home technology. Perfect for tech professionals and modern families.',
     highlights: ['Corporate Access', 'Smart Homes', 'Green Spaces', 'Modern Design'],

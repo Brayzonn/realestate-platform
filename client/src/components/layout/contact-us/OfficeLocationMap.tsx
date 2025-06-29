@@ -6,8 +6,9 @@ const OfficeLocationMap = () => {
   const openDirections = () => {
     const lat = parseFloat(import.meta.env.VITE_OFFICE_LAT);
     const lng = parseFloat(import.meta.env.VITE_OFFICE_LNG);
+
     const destination = `${lat},${lng}`;
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}&destination_place_id=${encodeURIComponent('Abuja, Nigeria')}`;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}&destination_place_id=${encodeURIComponent('Lagos, Nigeria')}`;
     window.open(googleMapsUrl, '_blank');
   };
 

@@ -1,4 +1,4 @@
-import { Building, Calendar, MapPin } from '@/components/icons/Index';
+import { Building, Calendar, MapPin } from '@/components/icons';
 
 const SubUrbanExpertise = () => {
   return (

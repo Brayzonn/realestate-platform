@@ -73,7 +73,7 @@ const Hero = ({ isMenuOpen, setIsMenuOpen, toggleMenu }: HeroProps) => {
               </div>
 
               <div
-                className={`flex items-center space-x-6 transition-all delay-200 duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+                className={`flex flex-col items-start space-y-6 transition-all delay-200 duration-700 ease-out md:flex-row md:space-x-6 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
               >
                 <Link
                   to="/properties"

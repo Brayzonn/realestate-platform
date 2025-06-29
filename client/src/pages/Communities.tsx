@@ -33,9 +33,9 @@ const Communities = () => {
 
       <main className="mx-auto max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">
         <SuburbanHero />
+        <AllComunities />
         <SuburbanStats />
 
-        <AllComunities />
         <SubUrbanExpertise />
         <SuburbanCTA />
       </main>

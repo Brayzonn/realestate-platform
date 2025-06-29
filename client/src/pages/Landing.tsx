@@ -17,7 +17,7 @@ const Landing = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Hero isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} />
       <FeaturedListings />
       <OurStory />

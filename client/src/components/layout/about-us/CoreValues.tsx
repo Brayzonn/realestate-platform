@@ -1,4 +1,4 @@
-import { CheckIcon, LightningIcon, HeartIcon } from '@/components/icons/Index';
+import { CheckIcon, LightningIcon, HeartIcon } from '@/components/icons';
 
 const CoreValues = () => {
   const values = [

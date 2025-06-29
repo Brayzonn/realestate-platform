@@ -1,6 +1,8 @@
 import { Property } from '@/ts-types/propertyTypes';
 
 const PropertyImageGallery = ({ property }: { property: Property }) => {
+  const galleryImages = property.images.filter((image) => image !== property.featuredImage);
+
   return (
     <section className="flex w-full flex-col space-y-16 py-24">
       <div className="text-left">
@@ -17,7 +19,7 @@ const PropertyImageGallery = ({ property }: { property: Property }) => {
       </div>
 
       <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {property.images.map((activeImg, index) => (
+        {galleryImages.map((activeImg, index) => (
           <div
             key={index}
             className="group overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"

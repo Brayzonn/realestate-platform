@@ -5,7 +5,7 @@ const ContactFormSection = () => {
     <section className="py-24">
       <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
         <div className="w-full">
-          <ContactCard />
+          <ContactCard useStoredProperty={false} />
         </div>
 
         <div className="w-full space-y-8">
