@@ -28,7 +28,6 @@ const Properties = () => {
         toggleMenu={toggleMenu}
         showBorder={true}
         borderOnMobileOnly={false}
-        className={`min-h-[100px] px-[1rem]`}
       />
 
       <main className="mx-auto flex max-w-7xl flex-1 flex-col space-y-20 px-6 py-24 md:py-32 lg:px-12">

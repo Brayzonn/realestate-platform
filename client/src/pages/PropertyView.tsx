@@ -43,7 +43,6 @@ const PropertyView = () => {
         toggleMenu={toggleMenu}
         showBorder={true}
         borderOnMobileOnly={false}
-        className={`min-h-[100px] px-[1rem]`}
       />
 
       <main className="mx-auto flex min-h-screen max-w-7xl flex-1 flex-col items-center space-y-[2rem] px-[1rem] pt-[3rem]">
