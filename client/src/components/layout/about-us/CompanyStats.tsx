@@ -13,7 +13,7 @@ const CompanyStats = () => {
             Our Track <span className="font-medium">Record</span>
           </h2>
 
-          <div className="mt-12 grid grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-light text-gray-900 lg:text-5xl">{stat.value}</div>
