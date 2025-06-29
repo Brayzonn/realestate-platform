@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { propertiesData } from '@/store/data';
 import PropertyCard from '@/components/common/PropertyCard';
-import { HomeIcon } from '@/components/icons';
+import { HomeIcon } from '@/components/icons/index';
 import { FeaturedListingsLoading } from '@/components/ui/loading/Index';
 import { useState, useEffect } from 'react';
 

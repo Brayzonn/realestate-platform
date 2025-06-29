@@ -1,4 +1,4 @@
-import { StarIcon } from '@/components/icons';
+import { StarIcon } from '@/components/icons/index';
 
 const AwardsRecognition = () => {
   const awards = [

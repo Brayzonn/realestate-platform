@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone } from '@/components/icons';
+import { MapPin, Mail, Phone } from '@/components/icons/index';
 
 const ContactMethods = () => {
   return (

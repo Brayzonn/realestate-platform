@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Property } from '@/ts-types/propertyTypes';
-import { SquareFootIcon, BedIcon, BathIcon } from '@/components/icons';
+import { SquareFootIcon, BedIcon, BathIcon } from '@/components/icons/index';
 
 interface PropertyCardProps {
   property: Property;

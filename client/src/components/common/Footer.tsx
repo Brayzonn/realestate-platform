@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../ui/Button';
+import Button from '@/components/ui/Button';
 import companylogo from '@/assets/images/companylogo.svg';
-import { TwitterIcon, FacebookIcon, YouTubeIcon, InstagramIcon } from '@/components/icons';
+import { TwitterIcon, FacebookIcon, YouTubeIcon, InstagramIcon } from '@/components/icons/index';
 
 const Footer = () => {
   const [email, setEmail] = useState('');

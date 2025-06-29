@@ -15,12 +15,12 @@ export const propertiesData: Property[] = [
       lng: 3.4219,
     },
     images: [
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 2100,
     bedrooms: 5,
@@ -37,12 +37,12 @@ export const propertiesData: Property[] = [
       lng: 7.4951,
     },
     images: [
-      'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1800,
     bedrooms: 4,
@@ -59,12 +59,12 @@ export const propertiesData: Property[] = [
       lng: 7.0498,
     },
     images: [
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1350,
     bedrooms: 3,
@@ -81,12 +81,12 @@ export const propertiesData: Property[] = [
       lng: 3.4347,
     },
     images: [
-      'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472591-ee6c7e5bfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1950,
     bedrooms: 4,
@@ -103,12 +103,12 @@ export const propertiesData: Property[] = [
       lng: 8.5211,
     },
     images: [
-      'https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1200,
     bedrooms: 3,
@@ -125,12 +125,12 @@ export const propertiesData: Property[] = [
       lng: 7.534,
     },
     images: [
-      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600563438938-a42a7d7b4d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1522444120501-4a6b2924e540?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1650,
     bedrooms: 4,
@@ -147,12 +147,12 @@ export const propertiesData: Property[] = [
       lng: 7.3811,
     },
     images: [
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1575517111478-7f6afd0973db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     category: 'For Sale',
     squareFeet: 1580,
     bedrooms: 4,
@@ -169,7 +169,7 @@ export const communitiesData: Communities[] = [
       'Established suburban neighborhood with tree-lined streets, excellent schools, and family-friendly amenities. Perfect for growing families and professionals seeking quiet residential living.',
     highlights: ['Top-Rated Schools', 'Family Parks', 'Single Family Homes', 'Community Center'],
     image:
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     activeListings: 24,
   },
   {
@@ -180,7 +180,7 @@ export const communitiesData: Communities[] = [
       'Premium suburban community featuring executive homes, manicured landscapes, and exclusive amenities. Luxury living in a peaceful residential setting.',
     highlights: ['Executive Homes', 'Golf Course Access', 'Gated Community', 'Luxury Amenities'],
     image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     activeListings: 18,
   },
   {
@@ -191,7 +191,7 @@ export const communitiesData: Communities[] = [
       'Charming suburban neighborhood with historic character, community gardens, and local shops. Perfect for those seeking authentic suburban charm and community connection.',
     highlights: ['Historic Homes', 'Community Gardens', 'Local Shops', 'Neighborhood Events'],
     image:
-      'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     activeListings: 12,
   },
   {
@@ -202,7 +202,7 @@ export const communitiesData: Communities[] = [
       'Exclusive suburban waterfront community with stunning lake views, private beaches, and resort-style amenities. The pinnacle of suburban luxury living.',
     highlights: ['Lake Views', 'Private Beach', 'Waterfront Homes', 'Marina Club'],
     image:
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     activeListings: 8,
   },
   {
@@ -213,7 +213,7 @@ export const communitiesData: Communities[] = [
       'Family-friendly suburban neighborhood near major universities. Perfect for faculty, staff, and young families seeking affordable suburban living with educational access.',
     highlights: ['University Access', 'Family Friendly', 'Affordable Homes', 'School District'],
     image:
-      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     activeListings: 31,
   },
   {
@@ -224,26 +224,26 @@ export const communitiesData: Communities[] = [
       'Modern suburban community near major corporate campuses with contemporary homes, green spaces, and smart home technology. Perfect for tech professionals and modern families.',
     highlights: ['Corporate Access', 'Smart Homes', 'Green Spaces', 'Modern Design'],
     image:
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+      'https://images.unsplash.com/photo-1486718448742-163732cd1544?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
     activeListings: 15,
   },
 ];
 
 export const slideImages: SlideImage[] = [
   {
-    url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
+    url: 'https://images.unsplash.com/photo-1585128792020-803d29415281?w=800&q=80',
     alt: 'Modern interior design living room',
   },
   {
-    url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80',
+    url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
     alt: 'Contemporary kitchen design',
   },
   {
-    url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
+    url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80',
     alt: 'Elegant bedroom interior',
   },
   {
-    url: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80',
+    url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
     alt: 'Stylish home office space',
   },
 ];
@@ -260,7 +260,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Sarah Johnson',
       avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Senior Real Estate Agent',
     },
     publishedAt: '2024-01-15',
@@ -269,7 +269,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['First Time Buyers', 'Home Buying', 'Tips'],
     featured: true,
     image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 1245,
     likes: 89,
   },
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Michael Chen',
       avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Market Analyst',
     },
     publishedAt: '2024-01-12',
@@ -293,7 +293,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Market Trends', '2024', 'Investment'],
     featured: false,
     image:
-      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 892,
     likes: 56,
   },
@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Emily Rodriguez',
       avatar:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Interior Design Specialist',
     },
     publishedAt: '2024-01-10',
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Home Staging', 'Selling', 'Interior Design'],
     featured: false,
     image:
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 1567,
     likes: 134,
   },
@@ -332,7 +332,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'David Park',
       avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Investment Advisor',
     },
     publishedAt: '2024-01-08',
@@ -341,7 +341,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Investment', 'Finance', 'Property'],
     featured: false,
     image:
-      'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 743,
     likes: 67,
   },
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Lisa Wong',
       avatar:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Community Specialist',
     },
     publishedAt: '2024-01-05',
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Neighborhoods', 'Community', 'Lifestyle'],
     featured: true,
     image:
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 2103,
     likes: 178,
   },
@@ -380,7 +380,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Robert Kim',
       avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
+        'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80',
       bio: 'Licensed Inspector',
     },
     publishedAt: '2024-01-03',
@@ -389,7 +389,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Home Inspection', 'Due Diligence', 'Safety'],
     featured: false,
     image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      'https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
     views: 1834,
     likes: 156,
   },
