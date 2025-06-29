@@ -4,7 +4,7 @@ A tailored real estate web application featuring interactive Google Maps integra
 
 ## Live Demo
 
-Check out the live project: [Link](https://realestate-platform-alpha.vercel.app/)
+[Check out the live project](https://realestate-platform-alpha.vercel.app/)
 
 ## Getting Started
 
