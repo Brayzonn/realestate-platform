@@ -41,7 +41,7 @@ const Hero = ({ isMenuOpen, setIsMenuOpen, toggleMenu }: HeroProps) => {
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
           toggleMenu={toggleMenu}
-          className="bg-inherit px-6 lg:px-12"
+          // className="px-4 lg:px-12"
         />
 
         <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col">

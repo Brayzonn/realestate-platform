@@ -17,7 +17,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="">
+    <div className={`${isMenuOpen ? 'h-screen overflow-hidden' : 'relative'}`}>
       <Hero isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggleMenu={toggleMenu} />
       <FeaturedListings />
       <OurStory />
