@@ -203,7 +203,7 @@ const ContactCard = ({ useStoredProperty = true }: ContactCardProps) => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <label htmlFor="name" className="mb-3 block text-sm font-medium text-gray-600">
-                Full Name *
+                Name *
               </label>
               <input
                 type="text"
@@ -217,7 +217,7 @@ const ContactCard = ({ useStoredProperty = true }: ContactCardProps) => {
                     ? 'border-red-300 focus:border-red-400 focus:ring-1 focus:ring-red-400'
                     : 'border-gray-200/60 focus:border-gray-400 focus:ring-1 focus:ring-gray-400'
                 }`}
-                placeholder="Your full name"
+                placeholder="Your name"
               />
             </div>
 
@@ -237,7 +237,7 @@ const ContactCard = ({ useStoredProperty = true }: ContactCardProps) => {
                     ? 'border-red-300 focus:border-red-400 focus:ring-1 focus:ring-red-400'
                     : 'border-gray-200/60 focus:border-gray-400 focus:ring-1 focus:ring-gray-400'
                 }`}
-                placeholder="your.email@example.com"
+                placeholder="youremail@example.com"
               />
             </div>
           </div>
