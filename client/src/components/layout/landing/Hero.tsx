@@ -5,6 +5,7 @@ import { useHeader } from '@/hooks/useHeader';
 import Nav from '@/components/common/Nav';
 import companylogoblack from '@/assets/images/companylogoblack.svg';
 import { ArrowUpRight } from 'lucide-react';
+import ProgressiveImage from '@/components/common/ProgressiveImage';
 
 interface HeroProps {
   isMenuOpen: boolean;
@@ -25,10 +26,13 @@ const Hero = ({ isMenuOpen, setIsMenuOpen, toggleMenu }: HeroProps) => {
     <>
       <section className="relative min-h-screen w-full overflow-hidden bg-gray-50">
         <div className="absolute inset-0 scale-105 transition-transform duration-[20s] ease-out">
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          <ProgressiveImage
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=75&auto=format,compress&fit=crop"
             alt="Luxury modern home"
             className="h-full w-full object-cover"
+            placeholderQuality={10}
+            placeholderWidth={50}
+            lazy={false}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80"></div>
         </div>

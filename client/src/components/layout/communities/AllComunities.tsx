@@ -1,4 +1,5 @@
 import { communitiesData } from '@/store/data';
+import ProgressiveImage from '@/components/common/ProgressiveImage';
 
 const AllComunities = () => {
   return (
@@ -10,12 +11,16 @@ const AllComunities = () => {
               key={index}
               className="group overflow-hidden rounded-sm border border-gray-200/60 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
             >
-              <div className="aspect-[16/9] w-full overflow-hidden">
-                <img
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
+                <ProgressiveImage
                   src={community.image}
                   alt={community.name}
+                  className="h-full w-full object-cover object-center transition-transform duration-200 group-hover:scale-105"
+                  placeholderQuality={10}
+                  placeholderWidth={50}
                 />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/50"></div>
               </div>
 
               <div className="p-8">
