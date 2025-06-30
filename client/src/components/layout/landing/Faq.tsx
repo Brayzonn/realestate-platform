@@ -7,7 +7,7 @@ import {
 
 const Faq = () => {
   return (
-    <div className="py-24">
+    <div className="py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mb-20 text-center">
           <div className="mb-8 flex items-center justify-center space-x-4">

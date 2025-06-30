@@ -1,7 +1,7 @@
 const BlogHero = () => {
   return (
-    <section className="py-24 text-center">
-      <div className="mx-auto max-w-4xl space-y-12">
+    <section className="pt-24 text-center">
+      <div className="mx-auto max-w-4xl space-y-12 pt-[2rem]">
         <div className="flex items-center justify-center space-x-4">
           <div className="h-px w-16 bg-yellow-400"></div>
           <span className="text-sm font-medium tracking-[0.2em] text-gray-600 uppercase">Blog</span>

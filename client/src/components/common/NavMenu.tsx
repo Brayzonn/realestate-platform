@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import companylogoblack from '@/assets/images/companylogoblack.svg';
+import Button from '@/components/ui/Button';
+import { CloseButtonIcon } from '@/components/icons/index';
 
 interface NavMenuProps {
   isOpen: boolean;
@@ -18,7 +20,7 @@ const NavMenu = ({ isOpen, onToggle }: NavMenuProps) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex transition-transform duration-500 ease-in-out ${
+      className={`fixed inset-0 z-60 flex transition-transform duration-500 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
@@ -31,6 +33,15 @@ const NavMenu = ({ isOpen, onToggle }: NavMenuProps) => {
             alt="companylogo"
             className="h-[40px] w-[40px] object-contain"
           />
+          {/* Added close button */}
+          <Button
+            variant="unstyled"
+            size="lg"
+            onClick={onToggle}
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm"
+          >
+            <CloseButtonIcon />
+          </Button>
         </div>
 
         <nav className="flex flex-1 flex-col items-start justify-start space-y-10 pt-[2rem] pr-[1rem] pl-[1rem] md:pl-[4rem]">

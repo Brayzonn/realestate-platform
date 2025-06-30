@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NewsUpdate = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-24 lg:px-12">
+    <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
       <div className="mb-20 text-left">
         <div className="mb-8 flex items-center space-x-4">
           <div className="h-px w-16 bg-yellow-400"></div>

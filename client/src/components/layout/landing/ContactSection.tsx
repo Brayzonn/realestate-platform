@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button';
 
 const ContactSection = () => {
   return (
-    <section className="py-24">
+    <section className="py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mb-20 text-left">
           <div className="mb-8 flex items-center space-x-4">

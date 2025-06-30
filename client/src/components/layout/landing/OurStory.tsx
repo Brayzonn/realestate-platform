@@ -78,7 +78,7 @@ const OurStory: React.FC = () => {
   }, [isVideoModalOpen]);
 
   return (
-    <section id="about" className="bg-white py-16 lg:py-24">
+    <section id="about" className="bg-white py-12 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-12">
