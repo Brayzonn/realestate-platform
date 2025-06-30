@@ -45,12 +45,12 @@ const Hero = ({ isMenuOpen, setIsMenuOpen, toggleMenu }: HeroProps) => {
 
         <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col">
           <div className="flex flex-1 items-center px-6 py-20 lg:px-12">
-            <div className="max-w-3xl space-y-12">
+            <div className="max-w-3xl space-y-6">
               <div
                 className={`transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
               >
-                <div className="flex items-center space-x-4">
-                  <div className="h-px w-16 bg-yellow-400"></div>
+                <div className="flex items-center space-x-4 pt-[3rem]">
+                  <div className="h-[1px] w-16 bg-yellow-400"></div>
                   <span className="text-sm font-medium tracking-[0.2em] text-white/90 uppercase">
                     Signature Homes
                   </span>
